@@ -21,13 +21,29 @@ import Footer from "./sections/Footer";
 const slidesHero = [
   {
     src: "src/assets/images/hero01.png",
-    title: "건강식을 찾고 있다면 위잇트에~~",
-    content: "당신만을 위한 맞춤형 건강식~",
+    title: "건강식을 찾고 있다면 위잇트에서 찾아보세요!",
+    content: "당신만을 위한 맞춤형 건강식당 서비스",
   },
-  { src: "https://placehold.co/600x400/blue/yellow", content: "Slide 2" },
-  { src: "https://placehold.co/600x400/green/black", content: "Slide 3" },
-  { src: "https://placehold.co/600x400/red/white", content: "Slide 4" },
-  { src: "https://placehold.co/600x400/black/white", content: "Slide 5" },
+  {
+    src: "src/assets/images/hero02.png",
+    title: "샐러드만 건강식이라는 생각은 NO!",
+    content: "위잇트에서 다양하고 맛있는 건강식의 세계를 보여드릴게요",
+  },
+  {
+    src: "src/assets/images/map.png",
+    title: "지도로 한눈에 보기 쉬운 맛집탐방",
+    content: "당신만을 위한 맞춤형 건강식당 서비스",
+  },
+  {
+    src: "src/assets/images/quiz.png",
+    title: "퀴즈도 풀고, 건강식 정보도 얻고",
+    content: "퀴즈에서 얻은 포인트로 귀여운 캐릭터 지금 만나러 가보실까요?",
+  },
+  {
+    src: "src/assets/images/review.png",
+    title: "위잇트에서 더 많은 이야기를 나눠보세요",
+    content: "식당 리뷰와 건강식 레시피를 공유하며 더 건강하게!",
+  },
 ];
 
 const Section = styled.section`
@@ -54,8 +70,8 @@ const App = () => {
       <>
         <GlobalStyle />
         <Header />
-        <Slider slides={slidesHero} duration={1} />
         <Hero />
+        <Slider slides={slidesHero} duration={1} />
         <Info1 />
         <Info2 />
         <Onboarding />

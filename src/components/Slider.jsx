@@ -31,7 +31,17 @@ const Slide = styled.div`
   color: white;
 `;
 
-const HeroContent = styled.p``;
+const Title = styled.h1`
+  font-size: 32px;
+  font-weight: bold;
+  color: ${(props) => props.color || "#1A1A1A"};
+`;
+
+const HeroContent = styled.p`
+    font-size: 18px;
+    text-align: center;
+    color: ${(props) => props.color || "#1A1A1A"};
+`;
 
 // 좌측 화살표 버튼
 const LeftArrow = styled.div`

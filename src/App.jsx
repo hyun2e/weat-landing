@@ -1,10 +1,20 @@
 // src/App.jsx
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import NavBar from "./components/NavBar";
 import GlobalStyle from "./styles/GlobalStyles";
 import { theme } from "./styles/theme";
-import Slider from "./components/Slider";
+import Header from "./sections/Header";
+import Hero from "./sections/Hero";
+import Info1 from "./sections/Info1";
+import Info2 from "./sections/Info2";
+import Info2 from "./sections/Info2";
+import Onboarding from "./sections/Onboarding";
+import Category from "./sections/Category";
+import Review from "./sections/Review";
+import Quiz from "./sections/Quiz";
+import Character from "./sections/Character";
+import Download from "./sections/Download";
+import Footer from "./sections/Footer";
 
 // 예시 슬라이드 데이터: src 값으로 정적인 이미지 URL을 사용합니다.
 const slidesHero = [
@@ -42,17 +52,17 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
-        <NavBar />
-        {/* 히어로 섹션에 Slider 컴포넌트를 포함 */}
-        <Section id="section-hero" $bgColor="#1E3A5F">
-          <Slider slides={slidesHero} duration={1} />
-        </Section>
-        <Section id="section1" $bgColor="#dee2be">
-          섹션 1
-        </Section>
-        <Section id="section2" $bgColor="#0F4C75">
-          섹션 2
-        </Section>
+        <Header /> 
+        <Hero />
+        <Info1 />
+        <Info2 />
+        <Onboarding />
+        <Category />
+        <Review />
+        <Quiz />
+        <Character />
+        <Download />
+        <Footer />
       </>
     </ThemeProvider>
   );

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const onboading = () => {
+const Onboading = () => {
   return (
     <div>
         <div>
@@ -47,4 +47,4 @@ const onboading = () => {
   )
 }
 
-export default onboading
+export default Onboading

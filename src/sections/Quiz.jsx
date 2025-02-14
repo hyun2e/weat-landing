@@ -23,7 +23,7 @@ const quiz = () => {
 
         <div>
             포인트 획득하기
-        {/* <button/> */}\
+        {/* <button/> */}
         </div>
     </div>
   )

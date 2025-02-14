@@ -111,7 +111,7 @@ const character = () => {
 
         <div>
             위펫 만나러가기
-            {/* <button/> */}\
+            {/* <button/> */}
         </div>
     </div>
   )

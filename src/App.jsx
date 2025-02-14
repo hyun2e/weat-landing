@@ -10,10 +10,12 @@ import Info2 from "./sections/Info2";
 import Onboarding from "./sections/Onboarding";
 import Category from "./sections/Category";
 import Review from "./sections/Review";
+import Chip from "./components/Chip";
 import Quiz from "./sections/Quiz";
 import Character from "./sections/Character";
 import Download from "./sections/Download";
 import Footer from "./sections/Footer";
+
 
 // 예시 슬라이드 데이터: src 값으로 정적인 이미지 URL을 사용합니다.
 const slidesHero = [
@@ -59,6 +61,7 @@ const App = () => {
         <Onboarding />
         <Category />
         <Review />
+        <Chip />
         <Quiz />
         <Character />
         <Download />

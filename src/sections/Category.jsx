@@ -16,45 +16,45 @@ const category = () => {
         <div>
             <div>
                 <div>
-                    <image/>
+                    <img/>
                     <p>다이어트</p>
                 </div>
                 <div>
-                    <image/>
+                    <img/>
                     <p>저탄고지</p>
                 </div>
                 <div>
-                    <image/>
+                    <img/>
                     <p>비건·채식</p>
                 </div>
                 <div>
-                    <image/>
+                    <img/>
                     <p>고단백</p>
                 </div>
                 <div>
-                    <image/>
+                    <img/>
                     <p>글루텐프리</p>
                 </div>
             </div>
             <div>
                 <div>
-                    <image/>
+                    <img/>
                     <p>저당·제로슈가</p>
                 </div>
                 <div>
-                    <image/>
+                    <img/>
                     <p>디톡스</p>
                 </div>
                 <div>
-                    <image/>
+                    <img/>
                     <p>저속노화</p>
                 </div>
                 <div>
-                    <image/>
+                    <img/>
                     <p>저염식</p>
                 </div>
                 <div>
-                    <image/>
+                    <img/>
                     <p>EVENT</p>
                 </div>
             </div>

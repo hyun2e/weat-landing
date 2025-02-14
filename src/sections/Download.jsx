@@ -13,10 +13,10 @@ const download = () => {
         </div>
         <div>
             <button>
-                <image/>
+                <img/>
             </button>
             <button>
-                <image/>
+                <img/>
             </button>
         </div>
     </div>

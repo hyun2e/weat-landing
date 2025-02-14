@@ -7,7 +7,6 @@ import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Info1 from "./sections/Info1";
 import Info2 from "./sections/Info2";
-import Info2 from "./sections/Info2";
 import Onboarding from "./sections/Onboarding";
 import Category from "./sections/Category";
 import Review from "./sections/Review";

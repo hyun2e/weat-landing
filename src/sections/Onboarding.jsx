@@ -4,7 +4,7 @@ const Onboarding = () => {
   return (
     <div>
         <div>
-            <image/>
+            <img/>
             <div>
                 <h4>
                 건강 목표나 선호하는 
@@ -18,7 +18,7 @@ const Onboarding = () => {
             </div>
         </div>
         <div>
-            <image/>
+            <img/>
             <div>
                 <h4>
                 좋아하는 음식의
@@ -31,7 +31,7 @@ const Onboarding = () => {
                 </p>
             </div>
         </div><div>
-            <image/>
+            <img/>
             <div>
                 <h4>
                 알러지나 피하고 싶은
@@ -47,4 +47,4 @@ const Onboarding = () => {
   )
 }
 
-export default Onboading
+export default Onboarding

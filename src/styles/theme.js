@@ -20,18 +20,18 @@ export const theme = {
     // 필요한 다른 폰트들...
   },
   fontSizes: {
-    10: "0.625rem", // review label 
-    11: "0.6875rem", // pet level body
-    12: "0.75rem", // review body
-    14: "0.875rem", // review cap
-    16: "1rem", // body, mobile hero body, button
-    18: "1.125rem", // button, header
-    20: "1.25rem", // review title
-    22: "1.375rem", // mobile hero title
-    24: "1.5rem", // subtitle
-    26: "1.625rem", // pc hero body
-    28: "1.75rem", // title 
-    32: "2rem", // pc hero title
+    fs10: "0.625rem", // review label 
+    fs11: "0.6875rem", // pet level body
+    fs12: "0.75rem", // review body
+    fs14: "0.875rem", // review cap
+    fs16: "1rem", // body, mobile hero body, button
+    fs18: "1.125rem", // button, header
+    fs20: "1.25rem", // review title
+    fs22: "1.375rem", // mobile hero title
+    fs24: "1.5rem", // subtitle
+    fs26: "1.625rem", // pc hero body
+    fs28: "1.75rem", // title 
+    fs32: "2rem", // pc hero title
     // 필요한 다른 크기들...
   },
   // 모바일 기준: 화면 폭이 768px 이하이면 모바일로 간주

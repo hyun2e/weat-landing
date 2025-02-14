@@ -4,58 +4,58 @@ const category = () => {
   return (
     <div>
         <div>
-            <div>
+            <h2>
             다양한 건강 카테고리에 맞춰
             식당을 탐색해보세요
-            </div>
-            <div>
+            </h2>
+            <p>
             다이어트, 비건, 고단백, 저당 등 다양한 카테고리를 탐색하여 
             나에게 딱 맞는 식당을 찾아건강한 한 끼를 더 쉽게 만나보세요!
-            </div>
+            </p>
         </div>
         <div>
             <div>
                 <div>
                     <image/>
-                    <div>다이어트</div>
+                    <p>다이어트</p>
                 </div>
                 <div>
                     <image/>
-                    <div>저탄고지</div>
+                    <p>저탄고지</p>
                 </div>
                 <div>
                     <image/>
-                    <div>비건·채식</div>
+                    <p>비건·채식</p>
                 </div>
                 <div>
                     <image/>
-                    <div>고단백</div>
+                    <p>고단백</p>
                 </div>
                 <div>
                     <image/>
-                    <div>글루텐프리</div>
+                    <p>글루텐프리</p>
                 </div>
             </div>
             <div>
                 <div>
                     <image/>
-                    <div>저당·제로슈가</div>
+                    <p>저당·제로슈가</p>
                 </div>
                 <div>
                     <image/>
-                    <div>디톡스</div>
+                    <p>디톡스</p>
                 </div>
                 <div>
                     <image/>
-                    <div>저속노화</div>
+                    <p>저속노화</p>
                 </div>
                 <div>
                     <image/>
-                    <div>저염식</div>
+                    <p>저염식</p>
                 </div>
                 <div>
                     <image/>
-                    <div>EVENT</div>
+                    <p>EVENT</p>
                 </div>
             </div>
         </div>

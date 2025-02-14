@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Onboading = () => {
+const Onboarding = () => {
   return (
     <div>
         <div>

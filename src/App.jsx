@@ -17,15 +17,15 @@ import Footer from "./sections/Footer";
 
 // 예시 슬라이드 데이터: src 값으로 정적인 이미지 URL을 사용합니다.
 const slidesHero = [
-  { src: "src/assets/images/hero01.png", content: "Slide 1" },
+  {
+    src: "src/assets/images/hero01.png",
+    title: "건강식을 찾고 있다면 위잇트에~~",
+    content: "당신만을 위한 맞춤형 건강식~",
+  },
   { src: "https://placehold.co/600x400/blue/yellow", content: "Slide 2" },
   { src: "https://placehold.co/600x400/green/black", content: "Slide 3" },
   { src: "https://placehold.co/600x400/red/white", content: "Slide 4" },
   { src: "https://placehold.co/600x400/black/white", content: "Slide 5" },
-  { src: "https://placehold.co/600x400/black/white", content: "Slide 5 cjh" },
-  { src: "https://placehold.co/600x400/black/white", content: "Slide cheol" },
-  { src: "https://placehold.co/600x400/black/white", content: "soim" },
-  { src: "https://placehold.co/600x400/black/white", content: "ge" },
 ];
 
 const Section = styled.section`
@@ -51,7 +51,8 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
-        <Header /> 
+        <Header />
+        <Slider slides={slidesHero} duration={1} />
         <Hero />
         <Info1 />
         <Info2 />

@@ -31,6 +31,8 @@ const Slide = styled.div`
   color: white;
 `;
 
+const HeroContent = styled.p``;
+
 // 좌측 화살표 버튼
 const LeftArrow = styled.div`
   position: absolute;
@@ -119,7 +121,8 @@ const Slider = ({ slides, auto = false, duration = 10 }) => {
       <SlideWrapper translate={-currentIndex * 100}>
         {slides.map((slide, index) => (
           <Slide key={index} src={slide.src}>
-            {slide.content}
+            <h1>{slide.title}</h1>
+            <HeroContent>{slide.content}</HeroContent>
           </Slide>
         ))}
       </SlideWrapper>

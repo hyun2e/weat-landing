@@ -72,7 +72,7 @@ const character = () => {
                 "src/assets/images/icon_Heart.svg",
                 "src/assets/images/icon_Heart.svg",
                 "src/assets/images/icon_Heart.svg",
-                "src/assets/images/icon_Heart grey.svg",    
+                "src/assets/images/icon_Heart.svg",
                  ]}
                text2="아름다운 꽃이 어떤 열매를 맺었을까요?"
                 />

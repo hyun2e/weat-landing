@@ -4,20 +4,12 @@ import styled from "styled-components";
 import { keyframes } from "styled-components";
 
 const InfiniteScrollRight = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
 `;
 const InfiniteScrollLeft = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
+  0% {transform: translateX(0);}
+  100% {transform: translateX(100%);}
 `;
 
 const Info2Container = styled.div`

@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
+const PlantWrapper = styled.div`
+  background-color: "#FFF7F2";
+  padding: "4px";
+  border-radius: "9px";
+  display: "inline-block";
+  height: "61px";
+  width: "61px";
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+`;
+
 const Card_character = ({ text1, text2, icons, plant }) => {
   console.log(text1);
   console.log(text2);
   console.log(plant);
   console.log(icons);
-
-  const PlantWrapper = styled.div`
-    background-color: "#FFF7F2";
-    padding: "4px";
-    border-radius: "9px";
-    display: "inline-block";
-    height: "61px";
-    width: "61px";
-    display: "flex";
-    justify-content: "center";
-    align-items: "center";
-  `;
 
   return (
     <div>

@@ -24,10 +24,10 @@ const OnboardingTextWrapper = styled.div`
   text-align: center;
   width: 401px;
   gap:20px;
-  order: 1;
+  order: 2;
 
   @media (max-width: 768px) {
-    order: 2;
+    order: 1;
   }
 `;
 
@@ -37,10 +37,10 @@ const OnboardingCardImage = styled.img`
   height: 200px;
   border-radius: 16px;
   border: none;
-  order: 2;
+  order: 1;
 
 @media (max-width: 768px) {
-  order: 1;
+  order: 2;
 }
 `
 

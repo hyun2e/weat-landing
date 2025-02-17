@@ -83,7 +83,6 @@ const App = () => {
           <Onboarding />
           <Category />
           <Review />
-          <Chip />
           <Quiz />
           <Character />
           <Download />

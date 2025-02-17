@@ -17,8 +17,6 @@ import Download from "./sections/Download";
 import Footer from "./sections/Footer";
 import Slider from "./components/Slider";
 
-
-
 // 예시 슬라이드 데이터: src 값으로 정적인 이미지 URL을 사용합니다.
 const slides = [
   {
@@ -43,6 +41,11 @@ const slides = [
   },
 ];
 
+const ContentWrapper = styled.div`
+  max-width: 800px;
+  margin: auto;
+`;
+
 const Section = styled.section`
   height: 500px;
   background-color: ${({ $bgColor }) => $bgColor || "#ffffff"};
@@ -61,25 +64,26 @@ const Section = styled.section`
 `;
 
 const App = () => {
-   
-    return (
+  return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
-        <Header />
-        <Section id="section-hero">
-          <Slider slides={slides} auto={true} duration={10} />
-        </Section>
-        <Info1 />
-        <Info2 />
-        <Onboarding />
-        <Category />
-        <Review />
-        <Chip />
-        <Quiz />
-        <Character />
-        <Download />
-        <Footer />
+        <ContentWrapper>
+          <Header />
+          <Section id="section-hero">
+            <Slider slides={slides} auto={true} duration={10} />
+          </Section>
+          <Info1 />
+          <Info2 />
+          <Onboarding />
+          <Category />
+          <Review />
+          <Chip />
+          <Quiz />
+          <Character />
+          <Download />
+          <Footer />
+        </ContentWrapper>
       </>
     </ThemeProvider>
   );

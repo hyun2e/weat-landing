@@ -12,16 +12,16 @@ const Info2Card = styled.div`
   padding: 12px 20px 12px 12px;
   border-radius: 36px;
   width: auto;
-  max-width:none;
+  min-width: 188px;
   border: 1px solid ${({ theme }) => theme.colors.grey250};
 `;
 
 // 인포2 텍스트 - 본문
 const Info2CardText = styled.p`
+  flex-grow: 1;
   white-space: pre-line;
   font-weight: 500;
   line-height: 1.5;
-  max-width: none;
   overflow: visible;
 `
 

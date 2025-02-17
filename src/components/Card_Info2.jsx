@@ -1,13 +1,19 @@
 import React from "react";
+import styled from "styled-components";
+
+const Info2Card = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+`;
 
 const Card_Info2 = ({ icon, text }) => {
-  console.log(icon);
-  console.log(text);
   return (
-    <div>
+    <Info2Card>
       <img src={icon} />
       <p>{text}</p>
-    </div>
+    </Info2Card>
   );
 };
 

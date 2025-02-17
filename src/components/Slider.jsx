@@ -40,9 +40,7 @@ const Title = styled.h1`
   font-size: 32px;
   text-align: center;
   font-weight: bold;
-  top: 35%;
   color: ${(props) => props.color || "#1A1A1A"};
-  gap: 20px;
 `;
 
 const HeroContent = styled.p`

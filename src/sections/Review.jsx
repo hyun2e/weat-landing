@@ -11,6 +11,9 @@ const ReviewContainer = styled.div`
   text-align: center;
   justify-content: center;
   gap: 40px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 `
 const ReviewTitle = styled.h2`
   line-height: 1.5;

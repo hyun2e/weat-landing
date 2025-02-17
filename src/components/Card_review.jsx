@@ -14,7 +14,7 @@ const CardTitle = styled.h2`
 /* 카드 컨테이너 */
 const CardContainer = styled.div`
   width: 276px;
-  min-width:267px;
+  min-width:276px;
   background: white;
   border-radius: 18px;
   box-shadow: -1px 6px 16px rgba(131, 131, 131, 0.25);
@@ -23,7 +23,6 @@ const CardContainer = styled.div`
   flex-direction: column;
   transition: transform 0.2s ease-in-out;
   margin: 0 auto; /* ✅ 카드 중앙 정렬 */
-
 `;
 
 /* 카드 내부 텍스트 영역 */

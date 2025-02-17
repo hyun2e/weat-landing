@@ -31,27 +31,32 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Pretendard', sans-serif;
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
+    line-height: 1.5;
   }
 
   h1 {
     font-size: ${({ theme }) => theme.fontSizes.fs32};
     font-weight: 600;
     color: #1A1A1A;
+    line-height: 1.5;
   }
 
   h2 {
     font-size: ${({ theme }) => theme.fontSizes.fs28};
     font-weight: 600;
+    line-height: 1.5;
   }
   
   h3 {
     font-size: ${({ theme }) => theme.fontSizes.fs24};
     font-weight: 400;
+    line-height: 1.5;
   }
 
   h4 {
     font-size: ${({ theme }) => theme.fontSizes.fs24};
     font-weight: 600;
+    line-height: 1.5;
   }
 
 `;

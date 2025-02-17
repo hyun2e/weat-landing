@@ -8,11 +8,13 @@ const CardTitle = styled.h2`
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 40px;
+  line-height: 1.5;
 `;
 
 /* 카드 컨테이너 */
 const CardContainer = styled.div`
   width: 276px;
+  min-width:267px;
   background: white;
   border-radius: 18px;
   box-shadow: -1px 6px 16px rgba(131, 131, 131, 0.25);

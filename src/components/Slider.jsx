@@ -35,6 +35,7 @@ const Title = styled.h1`
   font-size: 32px;
   font-weight: bold;
   color: ${(props) => props.color || "#1A1A1A"};
+  text-align: center;
 `;
 
 const HeroContent = styled.p`

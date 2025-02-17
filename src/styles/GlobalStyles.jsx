@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     font-size: ${({ theme }) => theme.fontSizes.fs32};
     font-weight: 600;
+    color: #1A1A1A;
   }
 
   h2 {

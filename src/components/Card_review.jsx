@@ -20,6 +20,10 @@ const CardContainer = styled.div`
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
   margin: 0 auto; /* ✅ 카드 중앙 정렬 */
+  /* Hover effect to scale the card */
+  &:hover {
+    transform: scale(1.1); /* 1.1배 확대 */
+  }
 `;
 
 /* 카드 내부 텍스트 영역 */

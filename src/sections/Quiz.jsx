@@ -38,7 +38,7 @@ const QuizCardWrapper = styled.div`
 const Texth2 = styled.a`
   color: ${({ theme }) => theme.colors.grey900};
   font-size: ${({ theme }) => theme.fontSizes.fs28};
-  font-weight: 700;
+  font-weight: 00;
   text-align: center;
 `;
 

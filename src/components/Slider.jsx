@@ -4,6 +4,11 @@ import styled from "styled-components";
 import LeftArrowImg from "../assets/images/hero_left_arrow.png";
 import RightArrowImg from "../assets/images/hero_right_arrow.png";
 import Button from "./Button";
+// import slide1Img from "../assets/images/PC_hero_1.png";
+// import slide2Img from "../assets/images/PC_hero_2.png";
+// import slide3Img from "../assets/images/PC_hero_3.png";
+// import slide4Img from "../assets/images/PC_hero_4.png";
+// import slide5Img from "../assets/images/PC_hero_5.png";
 
 // 슬라이더 전체 컨테이너
 const SliderContainer = styled.div`
@@ -24,7 +29,7 @@ const SlideWrapper = styled.div`
 const Slide = styled.div`
   min-width: 100%;
   height: 500px;
-  background-image: url(${(props) => props.src});
+  background-image: url(${props => props.src});
   background-size: cover;
   background-position: center;
   display: flex;
@@ -33,10 +38,12 @@ const Slide = styled.div`
   justify-content: center;
   font-size: 32px;
   color: white;
+  gap: 20px;
 `;
 
 const Title = styled.h1`
   font-size: 32px;
+  text-align: center;
   font-weight: bold;
   color: ${(props) => props.color || "#1A1A1A"};
 `;
@@ -85,11 +92,11 @@ const DotsContainer = styled.div`
 
 // 개별 도트
 const Dot = styled.div`
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: ${(props) =>
-    props.active ? "#ffffff" : "rgba(255, 255, 255, 0.5)"};
+    props.active ? "#1A1A1A" : "rgba(255, 255, 255, 0.5)"};
   cursor: pointer;
 `;
 
@@ -133,11 +140,11 @@ const Slider = ({ slides, auto = false, duration = 10 }) => {
           console.log(slide.button);
 
           return (
-            <Slide key={index} src={slide.src}>
+            <Slide key={index} image={slides.src}>
               <h1>{slide.title}</h1>
               <HeroContent>{slide.content}</HeroContent>
               {/* slide.button이 있다면 Button을 보여줘라 */}
-              {slide.button && <Button>자세히 보기</Button>}
+              {slide.button && <Button>위잇트로 바로가기</Button>}
             </Slide>
           );
         })}

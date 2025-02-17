@@ -6,7 +6,7 @@ const HeaderContainer = styled.header`
   top: 0;
   width: 100%;
   height: 80px;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,9 +15,14 @@ const HeaderContainer = styled.header`
 `;
 
 const Logo = styled.a`
-  display: block;
+  display: inline-block;
   width: 140px;
   height: 52px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `
 const HeaderButtons = styled.div`
   display: flex;
@@ -26,13 +31,17 @@ const HeaderButtons = styled.div`
 `
 
 const HeaderLink = styled.a`
-  color: ${({ theme }) => theme.colors.grey900};
+  color: ${({ theme }) => theme.colors.grey600};
   font-family: ${({ theme }) => theme.fonts.main};
   font-size: ${({ theme }) => theme.fontSizes.fs18};
   font-weight: 400;
   cursor: pointer;
   text-decoration: none;
   transition: color 0.3s ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.grey900};
+  }
 
   &:focus {
     font-weight: 600;
@@ -44,7 +53,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Logo>
-        <img src="/images/logo_typo.svg" alt="위잇트 로고" />
+        <img src="src/assets/images/logo_typo.svg" alt="위잇트 로고" />
       </Logo>
       <HeaderButtons>
         <HeaderLink href="/about">위잇트 소개</HeaderLink>

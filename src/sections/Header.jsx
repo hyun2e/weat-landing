@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 80px;
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
@@ -12,6 +12,9 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   padding: 20px 32px 16px 32px;
   z-index: 1000;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 const Logo = styled.a`

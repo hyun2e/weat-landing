@@ -1,6 +1,6 @@
-import React from 'react';
-import Button from '../components/Button';
-import Card_review from '../components/Card_review'; 
+import React from "react";
+import Button from "../components/Button";
+import Card_review from "../components/Card_review";
 
 function Review() {
   // 리뷰 데이터 배열

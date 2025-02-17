@@ -10,10 +10,13 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center; /* 가로 가운데 정렬 */
   text-align: center;
+  padding: 0 0 20px 0;
 `;
 
 // quizWrapper를 div로 변경
 const QuizWrapper = styled.div`
+  gap: 30px;
+  padding: 40px 16px 20px 16px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -27,7 +30,6 @@ const QuizCardWrapper = styled.div`
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3개의 이미지를 가로로 나열 */
-  gap: 10px; /* 이미지 간 간격 */
   align-items: center;
   justify-content: center; /* 가로 가운데 정렬 */
   text-align: center;
@@ -38,9 +40,9 @@ const Quiz = () => {
     <Wrapper>
       <QuizWrapper>
         <QuizCardWrapper>
-          <img src="src/assets/images/quizcard_1.png" alt="spelling" />
-          <img src="src/assets/images/quizcard_3.png" alt="OX" />
-          <img src="src/assets/images/quizcard_2.png" alt="picture" />
+          <img src="src/assets/images/quizcard_1.svg" alt="spelling" />
+          <img src="src/assets/images/quizcard_3.svg" alt="OX" />
+          <img src="src/assets/images/quizcard_2.svg" alt="picture" />
         </QuizCardWrapper>
         <div>
           <h2>

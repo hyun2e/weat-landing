@@ -4,6 +4,7 @@ export const theme = {
     primary: "#FF5D00", // 주요 색상 (orange)
     primary100: "#FFDFCC", // 화이트 버튼 호버
     primary200: "#FFBE99", // 주요 색상의 밝은 버전
+    primary400: "#FF7D33",
     primary600: "#CC4A00", // 주요 색상 버튼 호버
 
     secondary: "#00A980", // 보조 색상 (green)

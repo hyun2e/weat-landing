@@ -25,6 +25,9 @@ const Wrapper = styled.div`
   display: grid;
   gap: 18px;
   grid-template-columns: 61px 1fr;; /* 2개의 열로 가로로 나열 */
+  justify-content: flex-start; /* 가로로 왼쪽 정렬 */
+  align-items: flex-start; /* 세로로 위쪽 정렬 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
 `;
 
 

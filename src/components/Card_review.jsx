@@ -14,13 +14,10 @@ const CardTitle = styled.h2`
 /* 카드 컨테이너 */
 const CardContainer = styled.div`
   width: 276px;
-  min-width:276px;
   background: white;
   border-radius: 18px;
   box-shadow: -1px 6px 16px rgba(131, 131, 131, 0.25);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   transition: transform 0.2s ease-in-out;
   margin: 0 auto; /* ✅ 카드 중앙 정렬 */
 `;
@@ -64,7 +61,7 @@ const CardBody = styled.div`
   .card-title {
     font-size: 20px;
     font-weight: bold;
-    color: #1A1A1A;
+    color: #1a1a1a;
     word-wrap: break-word;
     white-space: normal;
   }
@@ -100,7 +97,7 @@ const Card_review = ({ review }) => {
   return (
     <>
       {/* 카드 외부 타이틀 (가운데 정렬) */}
-      <CardTitle>{review.mainTitle}</CardTitle>
+      {/* <CardTitle>{review.mainTitle}</CardTitle> */}
 
       <CardContainer>
         {/* 카드 */}

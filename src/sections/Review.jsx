@@ -14,24 +14,21 @@ const ReviewContainer = styled.div`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-`
+`;
 const ReviewTitle = styled.h2`
   line-height: 1.5;
-`
+`;
 
 const CardListWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   gap: 36px;
-  width: 588px;
-  align-items: center;
 `;
 
 const CardListContents = styled.div`
   display: flex;
   flex-direction: column;
   gap: 36px;
-`
+`;
 
 function Review() {
   // 리뷰 데이터 배열
@@ -97,7 +94,9 @@ function Review() {
   return (
     <ReviewContainer>
       {/* 페이지 제목 */}
-      <ReviewTitle>사용자들과 생생하고 신뢰도 높은 <br/> 리뷰를 공유해보세요</ReviewTitle>
+      <ReviewTitle>
+        사용자들과 생생하고 신뢰도 높은 <br /> 리뷰를 공유해보세요
+      </ReviewTitle>
 
       {/* 리뷰 카드 리스트 */}
       <CardListContents>

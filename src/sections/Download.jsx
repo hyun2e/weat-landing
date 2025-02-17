@@ -10,8 +10,8 @@ const DownloadWrapper = styled.div`
     gap:30px;
     padding: 0 16px 52px 16px;
 `
-
-const DownloadButton = styled.button`
+// 다운로드 버튼 스타일
+const DownloadButton = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,22 +35,32 @@ const DownloadTextWrapper = styled.div`
     gap:12px;
 `
 
+// 다운로드 제목 스타일
+const DownloadTitle = styled.h2`
+    line-height: 1.5;
+`
+// 다운로드 본문 스타일
+const DownloadDescription = styled.p`
+    color: ${({ theme }) => theme.colors.grey600};
+    line-height: 1.5;
+`
+
 const download = () => {
   return (
     <DownloadWrapper>
         <DownloadTextWrapper>
-            <h2>
+            <DownloadTitle>
             위잇트와 함께해요!
-            </h2>
-            <p>
+            </DownloadTitle>
+            <DownloadDescription>
             건강한 한 끼가 더 쉬워지는 곳, 위잇트 새로운 건강식 경험을 만들어갈 여러분을 기다립니다.
-            </p>
+            </DownloadDescription>
         </DownloadTextWrapper>
         <DownloadButtonWrapper>
-            <DownloadButton>
+            <DownloadButton href="https://play.google.com/store" target="_blank">
                 <img src="src/assets/images/PC_google play.png" alt="구글 플레이 스토어"/>
             </DownloadButton>
-            <DownloadButton>
+            <DownloadButton href="https://www.apple.com/app-store/" target="_blank">
                 <img src="src/assets/images/PC_app store.png" alt="앱 스토어"/>
             </DownloadButton>
         </DownloadButtonWrapper>

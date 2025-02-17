@@ -16,24 +16,27 @@ const PlantWrapper = styled.div`
 const Icon = styled.img`
   width: 16.5px; /* 아이콘 크기 설정 */
   height: 16.5px; /* 아이콘 크기 설정 */
-  margin: 1px, 2px;
+  margin: 0;
 `;
 
 const Wrapper = styled.div`
-  width: 100%;
-  margin: auto;
+  width: 329px;
+  height: 86px;
+  padding: 0 12px;
   display: grid;
-  gap: 18px;
-  grid-template-columns: 61px 1fr;; /* 2개의 열로 가로로 나열 */
-  justify-content: flex-start; /* 가로로 왼쪽 정렬 */
-  align-items: flex-start; /* 세로로 위쪽 정렬 */
+  border-bottom: 0.5px solid ${({ theme }) => theme.colors.grey200};
+  grid-template-columns: 61px 1fr; /* 2개의 열로 가로로 나열 */
+  gap: 24px 6px; /* 상하 간격 24px, 좌우 간격 6px */
+  justify-content: center; /* 가로로 가운데 정렬 */
+  align-items: center; /* 세로로 위쪽 정렬 */
   text-align: left; /* 텍스트 왼쪽 정렬 */
 `;
 
 const Texth2 = styled.a`
   color: ${({ theme }) => theme.colors.grey900};
   font-size: ${({ theme }) => theme.fontSizes.fs16};
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.5; /* 1.5배 간격 */
   text-align: center;
 `;
 
@@ -44,8 +47,23 @@ const TextP2 = styled.a`
   text-align: center;
 `;
 
-const MainWrapper = styled.div`
-  gap: 0px;
+
+const ICONWrapper = styled.div`
+  display: flex; /* flexbox로 설정 */
+  flex-direction: row;
+  width: 124px;
+  height: 22px;
+  gap: 10px;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: center;
+`;
+
+const SmallWrapper = styled.div`
+  height: 20px;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: center;
 `;
 
 const Card_character = ({ text1, text2, icons, plant }) => {
@@ -59,18 +77,18 @@ const Card_character = ({ text1, text2, icons, plant }) => {
       <PlantWrapper>
         <img src={plant} alt="plant" />
       </PlantWrapper>
-      <MainWrapper>
-        <div>
+      <div>
+        <ICONWrapper>
           <Texth2>{text1}</Texth2>
-          <div>
+          <SmallWrapper>
             {/* 아이콘 배열을 순회하여 각 아이콘을 렌더링 */}
             {icons.map((icon, index) => (
               <Icon key={index} src={icon} alt={`icon-${index}`} />
             ))}
-          </div>
-        </div>
+          </SmallWrapper>
+        </ICONWrapper>
         <TextP2>{text2}</TextP2>
-      </MainWrapper>
+      </div>
     </Wrapper>
   );
 };

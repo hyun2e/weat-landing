@@ -36,7 +36,14 @@ const CharacterWrapper = styled.div`
 const Texth2 = styled.a`
   color: ${({ theme }) => theme.colors.grey900};
   font-size: ${({ theme }) => theme.fontSizes.fs28};
-  font-weight: 600;
+  font-weight: 700;
+  text-align: center;
+`;
+
+const Texth3 = styled.a`
+  color: ${({ theme }) => theme.colors.grey600};
+  font-size: ${({ theme }) => theme.fontSizes.fs24};
+  font-weight: 500;
   text-align: center;
 `;
 
@@ -57,13 +64,23 @@ const TextWrapper = styled.div`
   gap: 10px;
 `;
 
+const BottomWrapper = styled.div`
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 가로 가운데 정렬 */
+  text-align: center;
+  gap: 10px;
+`;
+
 const character = () => {
   return (
     <Wrapper>
         
         <TextWrapper>
-            <Texth2>포인트를 모아서 4종 랜덤 위펫을 만나보세요!</Texth2>
-            <TextP>포인트를 모으면 화분에서 꽃이 자라고,랜덤 위펫 등장해요! 🌱🍅🥕🥦 어떤 친구가 나올지 기대해 보세요!</TextP>
+            <Texth2>포인트를 모아서 <br />4종 랜덤 위펫을 만나보세요!</Texth2>
+            <TextP>포인트를 모으면 화분에서 꽃이 자라고,랜덤 위펫 등장해요! <br />🌱🍅🥕🥦 어떤 친구가 나올지 기대해 보세요!</TextP>
         </TextWrapper>
 
         <CardWrapper>
@@ -135,10 +152,10 @@ const character = () => {
 
         </CardWrapper>
 
-        <div>
-            <h3>여러분을 기다리는 위펫은 어떤 모습일까요?</h3>
-            <img/>
-        </div>
+        <BottomWrapper>
+            <Texth3>여러분을 기다리는 위펫은 어떤 모습일까요?</Texth3>
+            <img src="src/assets/images/CursorClick.svg" alt="CursorClick" />
+        </BottomWrapper>
 
         <CharacterWrapper>
             <img src="src/assets/images/catrot_inactive.svg" alt="catrot" />

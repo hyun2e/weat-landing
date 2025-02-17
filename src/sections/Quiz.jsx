@@ -38,7 +38,7 @@ const QuizCardWrapper = styled.div`
 const Texth2 = styled.a`
   color: ${({ theme }) => theme.colors.grey900};
   font-size: ${({ theme }) => theme.fontSizes.fs28};
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
 `;
 
@@ -70,10 +70,10 @@ const Quiz = () => {
         </QuizCardWrapper>
         <TextWrapper>
           <Texth2>
-            퀴즈와 출석체크를 통해서 포인트를 얻어보세요
+            퀴즈와 출석체크를 <br /> 통해서 포인트를 얻어보세요
           </Texth2>
           <TextP>
-            퀴즈를 풀고 출석 체크하면 포인트가 쌓여요! 건강도 챙기고 혜택도 받아보세요.
+            퀴즈를 풀고 출석 체크하면 포인트가 쌓여요!<br /> 건강도 챙기고 혜택도 받아보세요.
           </TextP>
         </TextWrapper>
       </QuizWrapper>

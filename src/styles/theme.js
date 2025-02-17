@@ -14,6 +14,7 @@ export const theme = {
     grey600: "#666666", // 본문
     grey500: "#808080", // 리뷰 캡션
     grey250: "#CCCCCC", // 푸터 본문
+    grey200: "#D9D9D9", // 푸터 본문
     grey100: "#F2F2F2", // 푸터 탭
   },
   fonts: {

@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "./styles/GlobalStyles";
 import { theme } from "./styles/theme";
 import Header from "./sections/Header";
-
+import Button from "./components/Button";
 import Info1 from "./sections/Info1";
 import Info2 from "./sections/Info2";
 import Onboarding from "./sections/Onboarding";
@@ -22,6 +22,11 @@ const slides = [
   {
     title: "건강식을 찾고 있다면 위잇트에서 찾아보세요!",
     content: "당신만을 위한 맞춤형 건강식당 서비스",
+    button: {
+      text: "위잇트로 바로가기",
+      type: "outline-btn",
+      href: "/characters",
+    },
   },
   {
     title: "샐러드만 건강식이라는 생각은 NO!",

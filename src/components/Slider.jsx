@@ -1,6 +1,8 @@
 // src/components/Slider.jsx
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import LeftArrowImg from "../assets/images/hero_left_arrow.png";
+import RightArrowImg from "../assets/images/hero_right_arrow.png";
 
 // 슬라이더 전체 컨테이너
 const SliderContainer = styled.div`
@@ -35,7 +37,6 @@ const Title = styled.h1`
   font-size: 32px;
   font-weight: bold;
   color: ${(props) => props.color || "#1A1A1A"};
-  text-align: center;
 `;
 
 const HeroContent = styled.p`
@@ -45,30 +46,27 @@ const HeroContent = styled.p`
 `;
 
 // 좌측 화살표 버튼
-const LeftArrow = styled.div`
+const LeftArrow = styled.img`
   position: absolute;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
-  font-size: 32px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  width: 40px;
+  height: auto;
   cursor: pointer;
   user-select: none;
   z-index: 10;
 `;
 
+
 // 우측 화살표 버튼
-const RightArrow = styled.div`
+const RightArrow = styled.img`
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  font-size: 32px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  width: 40px;
+  height: auto;
   cursor: pointer;
   user-select: none;
   z-index: 10;
@@ -137,8 +135,12 @@ const Slider = ({ slides, auto = false, duration = 10 }) => {
           </Slide>
         ))}
       </SlideWrapper>
-      <LeftArrow onClick={prevSlide}>&#10094;</LeftArrow>
-      <RightArrow onClick={nextSlide}>&#10095;</RightArrow>
+      <div className="slider">
+        <LeftArrow src={LeftArrowImg} onClick={prevSlide} alt="Left Arrow" />
+      </div>
+      <div className="slider">
+        <RightArrow src={RightArrowImg} onClick={nextSlide} alt="Right Arrow" />
+      </div>
       <DotsContainer>
         {slides.map((_, index) => (
           <Dot

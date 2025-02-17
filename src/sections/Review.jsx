@@ -2,11 +2,34 @@ import React from "react";
 import Button from "../components/Button";
 import Card_review from "../components/Card_review";
 import styled from "styled-components";
+
+const ReviewContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 40px;
+`
+const ReviewTitle = styled.h2`
+  line-height: 1.5;
+`
+
 const CardListWrapper = styled.div`
   display: flex;
-  flex-direction: arrow;
+  flex-direction: row;
   gap: 36px;
-  width: 590px;`
+  width: 588px;
+  align-items: center;
+`;
+
+const CardListContents = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+`
+
 function Review() {
   // 리뷰 데이터 배열
   const reviews = [
@@ -69,25 +92,27 @@ function Review() {
   ];
 
   return (
-    <div>
+    <ReviewContainer>
       {/* 페이지 제목 */}
-      <h2>사용자들과 생생하고 신뢰도 높은 리뷰를 공유해보세요</h2>
+      <ReviewTitle>사용자들과 생생하고 신뢰도 높은 <br/> 리뷰를 공유해보세요</ReviewTitle>
 
       {/* 리뷰 카드 리스트 */}
-      <CardListWrapper>
-        <Card_review review={reviews[0]} />
-        <Card_review review={reviews[1]} />
-      </CardListWrapper>
-      <CardListWrapper>
-        <Card_review review={reviews[2]} />
-        <Card_review review={reviews[3]} />
-      </CardListWrapper>
+      <CardListContents>
+        <CardListWrapper>
+          <Card_review review={reviews[0]} />
+          <Card_review review={reviews[1]} />
+        </CardListWrapper>
+        <CardListWrapper>
+          <Card_review review={reviews[2]} />
+          <Card_review review={reviews[3]} />
+        </CardListWrapper>
+      </CardListContents>
 
       {/* 리뷰 더 보기 버튼 */}
       <Button type="outline-btn" href="/characters">
         리뷰 더 보러가기
       </Button>
-    </div>
+    </ReviewContainer>
   );
 }
 

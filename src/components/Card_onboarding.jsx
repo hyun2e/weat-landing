@@ -9,6 +9,11 @@ const OnboardingCard = styled.div`
   justify-content: space-between;
   text-align: center;
   width:100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 24px;
+  }
 `;
 
 // 온보딩 컨텐츠 - 텍스트
@@ -34,11 +39,19 @@ const OnboardingCardText = styled.p`
   white-space: pre-line;
   color: ${({ theme }) => theme.colors.grey600};
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSizes.fs14};
+  }
 `
 // 온보딩 텍스트 - 제목
 const OnboardingCardTitle = styled.h4`
   white-space: pre-line;
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSizes.fs22};
+  }
 `
 
 

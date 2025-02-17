@@ -12,11 +12,22 @@ const Info2Card = styled.div`
   padding: 12px 20px 12px 12px;
   border-radius: 36px;
   width: auto;
-  min-width: 188px;
   border: 1px solid ${({ theme }) => theme.colors.grey250};
   flex-shrink: 0;
   flex-grow: 0;
+
+  @media (max-width: 768px) {
+    height: 50px;
+    padding: 6px 12px 6px 7px;
+  }
 `;
+
+const Info2CardImage = styled.img`
+  @media (max-width: 768px) {
+    width: 33.6px;
+    height: 33.6px;
+  }
+`
 
 // 인포2 텍스트 - 본문
 const Info2CardText = styled.p`
@@ -25,12 +36,16 @@ const Info2CardText = styled.p`
   font-weight: 500;
   line-height: 1.5;
   overflow: visible;
+
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSizes.fs10};
+  }
 `
 
 const Card_Info2 = ({ icon, text }) => {
   return (
     <Info2Card>
-      <img src={icon} />
+      <Info2CardImage src={icon} />
       <Info2CardText>{text}</Info2CardText>
     </Info2Card>
   );

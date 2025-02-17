@@ -32,6 +32,10 @@ const Info2Container = styled.div`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (max-width: 768px) {
+    gap: 24px;
+  }
 `
 const Info2DataContainer = styled.div`
   width:100%;
@@ -39,6 +43,10 @@ const Info2DataContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 18px;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
 `
 const Info2DataWrapperRight = styled.div`
   display: flex;
@@ -47,6 +55,10 @@ const Info2DataWrapperRight = styled.div`
   gap: 12px;
   overflow: hidden;
   animation: ${InfiniteScrollRight} 230s linear infinite;
+
+  @media (max-width: 768px) {
+    gap: 4px;
+  }
 `
 const Info2DataWrapperLeft = styled.div`
   display: flex;
@@ -55,11 +67,19 @@ const Info2DataWrapperLeft = styled.div`
   gap: 12px;
   overflow: hidden;
   animation: ${InfiniteScrollLeft} 300s linear infinite;
+
+  @media (max-width: 768px) {
+    gap: 4px;
+  }
 `;
 
 // 인포2 제목 스타일
 const Info2Tile = styled.h2`
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSizes.fs22};
+  }
 `
 
 const Info2 = () => {

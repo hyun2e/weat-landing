@@ -11,6 +11,23 @@ const CategoryContainer = styled.div`
     justify-content: center;
     gap: 40px;
     padding: 0 16px;
+
+    @media (max-width: 768px) {
+        padding: 0 40px;
+  }
+`
+const CategoryContents = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+        gap: 20px;
+  }
 `
 const CategoryTextWrapper = styled.div`
     display: flex;
@@ -21,11 +38,19 @@ const CategoryTextWrapper = styled.div`
 // 카테고리 제목 스타일
 const CategoryTitle = styled.h2`
     line-height: 1.5;
+
+    @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSizes.fs22};
+  }
 `
 // 카테고리 본문 스타일
 const CategoryDescription = styled.p`
     color: ${({ theme }) => theme.colors.grey600};
     line-height: 1.5;
+
+    @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSizes.fs14};
+  }
 `
 
 const CategoryCardWrapper = styled.div`
@@ -34,6 +59,11 @@ const CategoryCardWrapper = styled.div`
     align-items: center;
     justify-content: center;
     gap: 28px;
+
+    @media (max-width: 768px) {
+        width: 396px;
+        gap: 24px;
+  }
 `
 
 const Category = () => {
@@ -64,16 +94,18 @@ const Category = () => {
                     나에게 딱 맞는 식당을 찾아 건강한 한 끼를 더 쉽게 만나보세요!
                 </CategoryDescription>
             </CategoryTextWrapper>
-            <CategoryCardWrapper>
-                {categoryDataTop.map((item, index) => (
-                    <Card_category icon={item.icon} text={item.text} key={index} />
-                ))}
-            </CategoryCardWrapper>
-            <CategoryCardWrapper>
-                {categoryDataBottom.map((item, index) => (
-                    <Card_category icon={item.icon} text={item.text} key={index} />
-                ))}
-            </CategoryCardWrapper>
+            <CategoryContents>
+                <CategoryCardWrapper>
+                    {categoryDataTop.map((item, index) => (
+                        <Card_category icon={item.icon} text={item.text} key={index} />
+                    ))}
+                </CategoryCardWrapper>
+                <CategoryCardWrapper>
+                    {categoryDataBottom.map((item, index) => (
+                        <Card_category icon={item.icon} text={item.text} key={index} />
+                    ))}
+                </CategoryCardWrapper>
+            </CategoryContents>
         </CategoryContainer>
     );
 };

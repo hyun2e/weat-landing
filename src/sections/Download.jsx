@@ -9,6 +9,10 @@ const DownloadWrapper = styled.div`
     flex-direction: column;
     gap:30px;
     padding: 0 16px 52px 16px;
+
+    @media (max-width: 768px) {
+        padding: 0 38px 0 0;
+    };
 `
 // 다운로드 버튼 스타일
 const DownloadButton = styled.a`
@@ -21,11 +25,25 @@ const DownloadButton = styled.a`
     border-radius: 34px;
     border: none;
 `
+// 다운로드 버튼 이미지 스타일
+const DownloadButtonImage = styled.img`
+    @media (max-width: 768px) {
+        width: 156px;
+        height: 52px;
+        border-radius: 26px;
+    };
+`
+
 const DownloadButtonWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
+
+    @media (max-width: 768px) {
+        width: 318px;
+        gap: 7px;
+  }
 `
 const DownloadTextWrapper = styled.div`
     display: flex;
@@ -38,11 +56,19 @@ const DownloadTextWrapper = styled.div`
 // 다운로드 제목 스타일
 const DownloadTitle = styled.h2`
     line-height: 1.5;
+
+    @media (max-width: 768px) {
+        font-size: ${({ theme }) => theme.fontSizes.fs22};
+  }
 `
 // 다운로드 본문 스타일
 const DownloadDescription = styled.p`
     color: ${({ theme }) => theme.colors.grey600};
     line-height: 1.5;
+
+    @media (max-width: 768px) {
+        font-size: ${({ theme }) => theme.fontSizes.fs14};
+  }
 `
 
 const download = () => {
@@ -58,10 +84,10 @@ const download = () => {
         </DownloadTextWrapper>
         <DownloadButtonWrapper>
             <DownloadButton href="https://play.google.com/store" target="_blank">
-                <img src="src/assets/images/PC_google play.png" alt="구글 플레이 스토어"/>
+                <DownloadButtonImage src="src/assets/images/PC_google play.png" alt="구글 플레이 스토어"/>
             </DownloadButton>
             <DownloadButton href="https://www.apple.com/app-store/" target="_blank">
-                <img src="src/assets/images/PC_app store.png" alt="앱 스토어"/>
+                <DownloadButtonImage src="src/assets/images/PC_app store.png" alt="앱 스토어"/>
             </DownloadButton>
         </DownloadButtonWrapper>
     </DownloadWrapper>

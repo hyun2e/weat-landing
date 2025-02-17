@@ -29,7 +29,7 @@ const SlideWrapper = styled.div`
 const Slide = styled.div`
   min-width: 100%;
   height: 500px;
-  background-image: url(${props => props.src});
+  background-image: url(${(props) => props.image});
   background-size: cover;
   background-position: center;
   display: flex;
@@ -138,13 +138,18 @@ const Slider = ({ slides, auto = false, duration = 10 }) => {
       <SlideWrapper translate={-currentIndex * 100}>
         {slides.map((slide, index) => {
           console.log(slide.button);
+          console.log(slide.src);
 
           return (
-            <Slide key={index} image={slides.src}>
+            <Slide key={index} image={slide.src}>
               <h1>{slide.title}</h1>
               <HeroContent>{slide.content}</HeroContent>
               {/* slide.button이 있다면 Button을 보여줘라 */}
-              {slide.button && <Button>위잇트로 바로가기</Button>}
+              {slide.button && (
+                <Button type={slide.button.type} href={slide.button.href}>
+                  위잇트로 바로가기
+                </Button>
+              )}
             </Slide>
           );
         })}

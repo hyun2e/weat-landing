@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import LeftArrowImg from "../assets/images/hero_left_arrow.png";
 import RightArrowImg from "../assets/images/hero_right_arrow.png";
+import Button from "./Button";
 
 // 슬라이더 전체 컨테이너
 const SliderContainer = styled.div`
@@ -27,6 +28,7 @@ const Slide = styled.div`
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 32px;
@@ -40,9 +42,9 @@ const Title = styled.h1`
 `;
 
 const HeroContent = styled.p`
-    font-size: 18px;
-    text-align: center;
-    color: ${(props) => props.color || "#1A1A1A"};
+  font-size: 18px;
+  text-align: center;
+  color: ${(props) => props.color || "#1A1A1A"};
 `;
 
 // 좌측 화살표 버튼
@@ -57,7 +59,6 @@ const LeftArrow = styled.img`
   user-select: none;
   z-index: 10;
 `;
-
 
 // 우측 화살표 버튼
 const RightArrow = styled.img`
@@ -128,12 +129,18 @@ const Slider = ({ slides, auto = false, duration = 10 }) => {
   return (
     <SliderContainer>
       <SlideWrapper translate={-currentIndex * 100}>
-        {slides.map((slide, index) => (
-          <Slide key={index} src={slide.src}>
-            <h1>{slide.title}</h1>
-            <HeroContent>{slide.content}</HeroContent>
-          </Slide>
-        ))}
+        {slides.map((slide, index) => {
+          console.log(slide.button);
+
+          return (
+            <Slide key={index} src={slide.src}>
+              <h1>{slide.title}</h1>
+              <HeroContent>{slide.content}</HeroContent>
+              {/* slide.button이 있다면 Button을 보여줘라 */}
+              {slide.button && <Button>자세히 보기</Button>}
+            </Slide>
+          );
+        })}
       </SlideWrapper>
       <div className="slider">
         <LeftArrow src={LeftArrowImg} onClick={prevSlide} alt="Left Arrow" />

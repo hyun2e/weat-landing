@@ -18,6 +18,7 @@ import Footer from "./sections/Footer";
 import Slider from "./components/Slider";
 
 // 예시 슬라이드 데이터: src 값으로 정적인 이미지 URL을 사용합니다.
+// button이 있는 슬라이드는 button:{}으로 버튼 키밸류 추가하기
 const slides = [
   {
     title: "건강식을 찾고 있다면 위잇트에서 찾아보세요!",

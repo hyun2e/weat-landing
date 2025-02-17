@@ -30,6 +30,23 @@ const Wrapper = styled.div`
   text-align: left; /* 텍스트 왼쪽 정렬 */
 `;
 
+const Texth2 = styled.a`
+  color: ${({ theme }) => theme.colors.grey900};
+  font-size: ${({ theme }) => theme.fontSizes.fs16};
+  font-weight: 600;
+  text-align: center;
+`;
+
+const TextP2 = styled.a`
+  color: ${({ theme }) => theme.colors.grey600};
+  font-size: ${({ theme }) => theme.fontSizes.fs11};
+  font-weight: 400;
+  text-align: center;
+`;
+
+const MainWrapper = styled.div`
+  gap: 0px;
+`;
 
 const Card_character = ({ text1, text2, icons, plant }) => {
   console.log(text1);
@@ -42,9 +59,9 @@ const Card_character = ({ text1, text2, icons, plant }) => {
       <PlantWrapper>
         <img src={plant} alt="plant" />
       </PlantWrapper>
-      <div>
+      <MainWrapper>
         <div>
-          <p>{text1}</p>
+          <Texth2>{text1}</Texth2>
           <div>
             {/* 아이콘 배열을 순회하여 각 아이콘을 렌더링 */}
             {icons.map((icon, index) => (
@@ -52,8 +69,8 @@ const Card_character = ({ text1, text2, icons, plant }) => {
             ))}
           </div>
         </div>
-        <p>{text2}</p>
-      </div>
+        <TextP2>{text2}</TextP2>
+      </MainWrapper>
     </Wrapper>
   );
 };

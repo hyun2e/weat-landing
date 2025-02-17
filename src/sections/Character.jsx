@@ -33,14 +33,38 @@ const CharacterWrapper = styled.div`
   text-align: center;
 `;
 
+const Texth2 = styled.a`
+  color: ${({ theme }) => theme.colors.grey900};
+  font-size: ${({ theme }) => theme.fontSizes.fs28};
+  font-weight: 600;
+  text-align: center;
+`;
+
+const TextP = styled.a`
+  color: ${({ theme }) => theme.colors.grey600};
+  font-size: ${({ theme }) => theme.fontSizes.fs18};
+  font-weight: 400;
+  text-align: center;
+`;
+
+const TextWrapper = styled.div`
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 가로 가운데 정렬 */
+  text-align: center;
+  gap: 10px;
+`;
+
 const character = () => {
   return (
     <Wrapper>
         
-        <div>
-            <h2>포인트를 모아서 4종 랜덤 위펫을 만나보세요!</h2>
-            <p>포인트를 모으면 화분에서 꽃이 자라고,랜덤 위펫 등장해요! 🌱🍅🥕🥦 어떤 친구가 나올지 기대해 보세요!</p>
-        </div>
+        <TextWrapper>
+            <Texth2>포인트를 모아서 4종 랜덤 위펫을 만나보세요!</Texth2>
+            <TextP>포인트를 모으면 화분에서 꽃이 자라고,랜덤 위펫 등장해요! 🌱🍅🥕🥦 어떤 친구가 나올지 기대해 보세요!</TextP>
+        </TextWrapper>
 
         <CardWrapper>
             <Card_character

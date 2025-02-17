@@ -35,6 +35,30 @@ const QuizCardWrapper = styled.div`
   text-align: center;
 `;
 
+const Texth2 = styled.a`
+  color: ${({ theme }) => theme.colors.grey900};
+  font-size: ${({ theme }) => theme.fontSizes.fs28};
+  font-weight: 600;
+  text-align: center;
+`;
+
+const TextP = styled.a`
+  color: ${({ theme }) => theme.colors.grey600};
+  font-size: ${({ theme }) => theme.fontSizes.fs18};
+  font-weight: 400;
+  text-align: center;
+`;
+
+const TextWrapper = styled.div`
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 가로 가운데 정렬 */
+  text-align: center;
+  gap: 10px;
+`;
+
 const Quiz = () => {
   return (
     <Wrapper>
@@ -44,14 +68,14 @@ const Quiz = () => {
           <img src="src/assets/images/quizcard_3.svg" alt="OX" />
           <img src="src/assets/images/quizcard_2.svg" alt="picture" />
         </QuizCardWrapper>
-        <div>
-          <h2>
+        <TextWrapper>
+          <Texth2>
             퀴즈와 출석체크를 통해서 포인트를 얻어보세요
-          </h2>
-          <p>
+          </Texth2>
+          <TextP>
             퀴즈를 풀고 출석 체크하면 포인트가 쌓여요! 건강도 챙기고 혜택도 받아보세요.
-          </p>
-        </div>
+          </TextP>
+        </TextWrapper>
       </QuizWrapper>
 
       <Button type="outline-btn" href="/characters">

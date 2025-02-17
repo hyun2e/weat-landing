@@ -1,17 +1,48 @@
 import React from 'react'
 import Button from '../components/Button'
 import Card_character from '../components/Card_character'
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 이미지 간 간격 */
+  align-items: center;
+  justify-content: center; /* 가로 가운데 정렬 */
+  text-align: center;
+`;
+
+const CardWrapper = styled.div`
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3개의 이미지를 가로로 나열 */
+  grid-template-rows: repeat(1, 1fr); /* 2개의 행을 세로로 나열 */
+  align-items: center;
+  justify-content: center; /* 가로 가운데 정렬 */
+  text-align: center;
+`;
+
+const CharacterWrapper = styled.div`
+  margin: auto;
+  display: flex;
+  flex-direction: row; /* 가로로 배치 */
+  align-items: center;
+  justify-content: center; /* 가로 가운데 정렬 */
+  text-align: center;
+`;
 
 const character = () => {
   return (
-    <div>
+    <Wrapper>
         
         <div>
             <h2>포인트를 모아서 4종 랜덤 위펫을 만나보세요!</h2>
             <p>포인트를 모으면 화분에서 꽃이 자라고,랜덤 위펫 등장해요! 🌱🍅🥕🥦 어떤 친구가 나올지 기대해 보세요!</p>
         </div>
 
-        <div>
+        <CardWrapper>
             <Card_character
             plant="src/assets/images/Flower_Level1.svg"
             text1="Lv.1"
@@ -78,24 +109,24 @@ const character = () => {
                 />
 
 
-        </div>
+        </CardWrapper>
 
         <div>
             <h3>여러분을 기다리는 위펫은 어떤 모습일까요?</h3>
             <img/>
         </div>
 
-        <div>
-            <img/>
-            <img/>
-            <img/>
-            <img/>
-        </div>
+        <CharacterWrapper>
+            <img src="src/assets/images/catrot_inactive.svg" alt="catrot" />
+            <img src="src/assets/images/gomato_inactive.svg" alt="gomato" />
+            <img src="src/assets/images/buldocoli_inactive.svg" alt="buldocoli" />
+            <img src="src/assets/images/radigi_inactive.svg" alt="radigi" />
+        </CharacterWrapper>
 
         <Button type="outline-btn" href="/characters">
             위펫 만나러가기
         </Button>
-    </div>
+    </Wrapper>
   )
 }
 

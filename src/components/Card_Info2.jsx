@@ -14,6 +14,8 @@ const Info2Card = styled.div`
   width: auto;
   min-width: 188px;
   border: 1px solid ${({ theme }) => theme.colors.grey250};
+  flex-shrink: 0;
+  flex-grow: 0;
 `;
 
 // 인포2 텍스트 - 본문

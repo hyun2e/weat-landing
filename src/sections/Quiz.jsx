@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Button from '../components/Button';
 
 const quiz = () => {
   return (
@@ -19,11 +20,11 @@ const quiz = () => {
              </div>
         </div>
 
-        <button>
+        <Button type="outline-btn" href="/characters">
             포인트 획득하기
-        </button>
+        </Button>
     </div>
   )
 }
 
-export default quiz
+export default quiz;

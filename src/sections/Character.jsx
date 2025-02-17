@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../components/Button'
 
 const character = () => {
   return (
@@ -107,9 +108,9 @@ const character = () => {
             <img/>
         </div>
 
-        <button>
+        <Button type="outline-btn" href="/characters">
             위펫 만나러가기
-        </button>
+        </Button>
     </div>
   )
 }

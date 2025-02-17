@@ -17,6 +17,7 @@ import Download from "./sections/Download";
 import Footer from "./sections/Footer";
 
 
+
 // 예시 슬라이드 데이터: src 값으로 정적인 이미지 URL을 사용합니다.
 const slidesHero = [
   {
@@ -71,7 +72,7 @@ const App = () => {
         <GlobalStyle />
         <Header />
         <Hero />
-        <Slider slides={slidesHero} duration={1} />
+        {/* <Slider slides={slidesHero} duration={1} /> */}
         <Info1 />
         <Info2 />
         <Onboarding />

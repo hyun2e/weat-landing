@@ -78,6 +78,7 @@ export const OutlineButton = styled.a`
 `;
 // Button 컴포넌트
 // full-btn
+// Button.js에서 Button 컴포넌트를 default export로 내보내기
 const Button = ({ type, href, children }) => {
   switch (type) {
     case "hero-btn1":
@@ -87,24 +88,26 @@ const Button = ({ type, href, children }) => {
           {children}
         </HeroButton1>
       );
-      case "hero-btn2":
+    case "hero-btn2":
       return (
         <HeroButton2 href={href} target="_blank" rel="noopener noreferrer">
           {children}
         </HeroButton2>
       );
-      case "hero-btn3":
-        return (
-          <HeroButton3 href={href} target="_blank" rel="noopener noreferrer">
-            {children}
-          </HeroButton3>
-        );
-        case "outline-btn":
-          return (
-            <OutlineButton href={href} target="_blank" rel="noopener noreferrer">
-              {children}
-            </OutlineButton>
-          );
+    case "hero-btn3":
+      return (
+        <HeroButton3 href={href} target="_blank" rel="noopener noreferrer">
+          {children}
+        </HeroButton3>
+      );
+    case "outline-btn":
+      return (
+        <OutlineButton href={href} target="_blank" rel="noopener noreferrer">
+          {children}
+        </OutlineButton>
+      );
   }
 };
+
+// Button을 기본 내보내기 (default export)로 설정
 export default Button;

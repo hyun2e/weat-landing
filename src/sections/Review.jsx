@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../components/Button'
 
 function Review() {
   return (
@@ -136,7 +137,7 @@ function Review() {
             </div>
         </div>
     </div>
-    <button> 리뷰 더 보러가기</button>
+    <Button type="outline-btn" href="/characters"> 리뷰 더 보러가기</Button>
 </div>
   )
 }

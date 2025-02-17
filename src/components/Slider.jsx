@@ -31,6 +31,7 @@ const Slide = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  top: 35%;
   font-size: 32px;
   color: white;
   gap: 20px;

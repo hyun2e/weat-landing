@@ -1,7 +1,12 @@
 import React from "react";
 import Button from "../components/Button";
 import Card_review from "../components/Card_review";
-
+import styled from "styled-components";
+const CardListWrapper = styled.div`
+  display: flex;
+  flex-direction: arrow;
+  gap: 36px;
+  width: 590px;`
 function Review() {
   // 리뷰 데이터 배열
   const reviews = [
@@ -64,17 +69,19 @@ function Review() {
   ];
 
   return (
-    <div className="review-container">
+    <div>
       {/* 페이지 제목 */}
       <h2>사용자들과 생생하고 신뢰도 높은 리뷰를 공유해보세요</h2>
 
       {/* 리뷰 카드 리스트 */}
-      <div className="card-list">
+      <CardListWrapper>
         <Card_review review={reviews[0]} />
         <Card_review review={reviews[1]} />
+      </CardListWrapper>
+      <CardListWrapper>
         <Card_review review={reviews[2]} />
         <Card_review review={reviews[3]} />
-      </div>
+      </CardListWrapper>
 
       {/* 리뷰 더 보기 버튼 */}
       <Button type="outline-btn" href="/characters">

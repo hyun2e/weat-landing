@@ -1,62 +1,144 @@
 import React from "react";
-import Chip from "../components/Chip"; // Chip 컴포넌트 불러오기
+import Chip from "../components/Chip";
 import styled from "styled-components";
 
+/* 카드 외부 타이틀 */
+const CardTitle = styled.h2`
+  text-align: center; /* ✅ 카드 바깥 타이틀 중앙 정렬 */
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+`;
+
+/* 카드 컨테이너 */
 const CardContainer = styled.div`
-  /* 스타일 입력   */
+  width: 276px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: -1px 6px 16px rgba(131, 131, 131, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+  margin: 0 auto; /* ✅ 카드 중앙 정렬 */
+
 `;
 
+/* 카드 내부 텍스트 영역 */
 const CardWrapper = styled.div`
-  /* 스타일 입력   */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left; /* ✅ 카드 내부 텍스트 좌측 정렬 */
 `;
 
+/* 카드 이미지 */
+const CardImage = styled.div`
+  width: 100%;
+  height: 192px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+/* 카드 헤더 (칩 + 날짜) */
 const CardHeader = styled.div`
-  /* 스타일 입력   */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ✅ 좌측 정렬 */
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #808080;
+  gap: 5px;
 `;
 
+/* 카드 본문 */
 const CardBody = styled.div`
-  /* 스타일 입력   */
+  margin-top: 10px;
+
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1A1A1A;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .card-content {
+    font-size: 12px;
+    color: #666666;
+    margin-top: 4px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+`;
+
+/* 카드 푸터 */
+const CardFooter = styled.div`
+  display: flex;
+  justify-content: flex-start; /* ✅ 좌측 정렬 */
+  align-items: center;
+  margin-top: 13px;
+  font-size: 14px;
+  color: #808080;
+  gap: 11px;
+`;
+
+const CardIcon = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
 `;
 
 const Card_review = ({ review }) => {
   return (
-    <CardContainer>
-      {/* 카드 텍스트 부분 */}
-      <CardWrapper>
-        {/* 카드 헤더: 칩(라벨), 날짜 */}
-        <CardHeader>
-          <Chip>{review.chip}</Chip> {/* Chip 컴포넌트 사용 */}
-          <Chip>{review.chip2}</Chip>
-          <p>{review.date}</p>
-        </CardHeader>
+    <>
+      {/* 카드 외부 타이틀 (가운데 정렬) */}
+      <CardTitle>{review.mainTitle}</CardTitle>
 
-        {/* 카드 바디: 제목과 내용 */}
-        <CardBody>
-          <p className="card-title">{review.title}</p>
-          <p className="card-content">{review.content}</p>
-        </CardBody>
+      <CardContainer>
+        {/* 카드 */}
+        <CardWrapper>
+          {/* 카드 헤더 */}
+          <CardHeader>
+            <Chip>{review.chip}</Chip>
+            <Chip>{review.chip2}</Chip>
+            <p>{review.date}</p>
+          </CardHeader>
 
-        {/* 카드 이미지 */}
-        <div className="card-image">
+          {/* 카드 바디 */}
+          <CardBody>
+            <p className="card-title">{review.title}</p>
+            <p className="card-content">{review.content}</p>
+          </CardBody>
+
+          {/* 카드 푸터 */}
+          <CardFooter>
+            <CardIcon>
+              <img src={review.likeIcon} alt="like" />
+              <p>{review.likeCount}</p>
+            </CardIcon>
+            <CardIcon>
+              <img src={review.ChatIcon} alt="chat" />
+              <p>{review.ChatCount}</p>
+            </CardIcon>
+            <CardIcon>
+              <img src={review.BookMarkIcon} alt="bookmark" />
+            </CardIcon>
+          </CardFooter>
+        </CardWrapper>
+
+        {/* 이미지 */}
+        <CardImage>
           <img src={review.image} alt="restaurant" />
-        </div>
-
-        {/* 카드 푸터: 좋아요, 댓글, 공유 아이콘 */}
-        <div className="card-footer">
-          <div className="card-icon">
-            <img src={review.likeIcon} alt="like" />
-            <p>{review.likeCount}</p>
-          </div>
-          <div className="card-icon">
-            <img src={review.ChatIcon} alt="chat" />
-            <p>{review.ChatCount}</p>
-          </div>
-          <div className="card-icon">
-            <img src={review.BookMarkIcon} alt="bookmark" />
-          </div>
-        </div>
-      </CardWrapper>
-    </CardContainer>
+        </CardImage>
+      </CardContainer>
+    </>
   );
 };
 

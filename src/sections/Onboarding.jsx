@@ -1,14 +1,6 @@
 import React from 'react'
 import Card_onboarding from '../components/Card_onboarding'
 
-const OnboardingWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:40px;
-    padding: 0 16px;
-`
 
 const Onboarding = () => {
     const onboardingData = [

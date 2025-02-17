@@ -4,11 +4,6 @@ import styled from "styled-components";
 import LeftArrowImg from "../assets/images/hero_left_arrow.png";
 import RightArrowImg from "../assets/images/hero_right_arrow.png";
 import Button from "./Button";
-// import slide1Img from "../assets/images/PC_hero_1.png";
-// import slide2Img from "../assets/images/PC_hero_2.png";
-// import slide3Img from "../assets/images/PC_hero_3.png";
-// import slide4Img from "../assets/images/PC_hero_4.png";
-// import slide5Img from "../assets/images/PC_hero_5.png";
 
 // 슬라이더 전체 컨테이너
 const SliderContainer = styled.div`
@@ -45,7 +40,9 @@ const Title = styled.h1`
   font-size: 32px;
   text-align: center;
   font-weight: bold;
+  top: 35%;
   color: ${(props) => props.color || "#1A1A1A"};
+  gap: 20px;
 `;
 
 const HeroContent = styled.p`

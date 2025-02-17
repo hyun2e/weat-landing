@@ -37,17 +37,21 @@ const Slide = styled.div`
   gap: 20px;
 `;
 
+const UnvisibleDiv = styled.div`
+  height: 60px;
+`;
+
 const Title = styled.h1`
   font-size: 32px;
   text-align: center;
   font-weight: bold;
-  color: ${(props) => props.color || "#1A1A1A"};
+  color: ${({ isActive }) => (isActive ? "#ffffff" : "#1A1A1A")};
 `;
 
 const HeroContent = styled.p`
   font-size: 18px;
   text-align: center;
-  color: ${(props) => props.color || "#1A1A1A"};
+  color: ${({ isActive }) => (isActive ? "#ffffff" : "#1A1A1A")};
 `;
 
 // 좌측 화살표 버튼
@@ -133,18 +137,19 @@ const Slider = ({ slides, auto = false, duration = 10 }) => {
     <SliderContainer>
       <SlideWrapper translate={-currentIndex * 100}>
         {slides.map((slide, index) => {
-          console.log(slide.button);
-          console.log(slide.src);
+          const isActive = index === 1;
 
           return (
-            <Slide key={index} image={slide.src}>
-              <h1>{slide.title}</h1>
-              <HeroContent>{slide.content}</HeroContent>
+            <Slide key={index} index={index} image={slide.src}>
+              <Title isActive={isActive}>{slide.title}</Title>
+              <HeroContent isActive={isActive}>{slide.content}</HeroContent>
               {/* slide.button이 있다면 Button을 보여줘라 */}
-              {slide.button && (
+              {slide.button ? (
                 <Button type={slide.button.type} href={slide.button.href}>
                   위잇트로 바로가기
                 </Button>
+              ) : (
+                <UnvisibleDiv />
               )}
             </Slide>
           );

@@ -117,13 +117,13 @@ const Header = () => {
       <Logo>
         <img src="src/assets/images/logo_typo.svg" alt="위잇트 로고" />
       </Logo>
-      <HeaderButtons onClick={toggleMenu}>
+      <HeaderButtons>
         <HeaderLink href="/about">위잇트 소개</HeaderLink>
         <HeaderLink href="/community">커뮤니티</HeaderLink>
         <HeaderLink href="/challenge">챌린지</HeaderLink>
         <HeaderLink href="/download">다운로드</HeaderLink>
       </HeaderButtons>
-      <HamburgerButton>
+      <HamburgerButton onClick={toggleMenu}>
         <img src="src/assets/images/burger-menu.svg" alt="메뉴" />
       </HamburgerButton>
       <MobileMenu isOpen={menuOpen}>

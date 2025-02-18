@@ -1,31 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "./Header";
 
 const Info1Wrapper = styled.div`
   width: 100%;
-  height: 572px;
+  height: 560px;
   margin: auto;
   display: grid;
   flex-direction: row;
   align-items: center;
-  justify-content: center; /* 가로 가운데 정렬 */
+  justify-content: center;
   text-align: center;
   background-color: ${({ theme }) => theme.colors.primary400};
-  /* background-image: url("src/assets/images/pc_section2 bg.png"); */
-  background-size: cover; /* 이미지 크기를 부모 요소에 맞게 조정 */
-  background-position: center; /* 이미지가 부모 요소의 가운데에 위치하도록 설정 */
-  background-repeat: no-repeat; /* 배경 이미지 반복 안 함 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 `;
 
 const ContentGrad = styled.img`
   width: 100%;
+  height: 560px;
   position: absolute;
   bottom: 0;
   z-index: 100;
 `;
-
 
 const HeaderWrapper = styled.div`
   margin: auto;
@@ -33,25 +31,17 @@ const HeaderWrapper = styled.div`
   flex-direction: row;
   gap: 10px;
   align-items: center;
-  justify-content: center; /* 가로 가운데 정렬 */
+  justify-content: center;
   text-align: center;
 `;
 
 const Image = styled.img`
   margin: auto;
   display: grid;
-  width: 21.5px; /* 이미지의 가로 크기 설정 */
-  height: 21.5px; /* 이미지의 세로 크기 설정 */
+  width: 21.5px;
+  height: 21.5px;
   align-items: center;
-  justify-content: center; /* 가로 가운데 정렬 */
-  text-align: center;
-`;
-
-const ImageOP = styled.img`
-  padding: 40px 0 0 0;
-  margin: auto;
-  align-items: center;
-  justify-content: center; /* 가로 가운데 정렬 */
+  justify-content: center;
   text-align: center;
 `;
 
@@ -60,6 +50,28 @@ const Texth2 = styled.a`
   font-size: ${({ theme }) => theme.fontSizes.fs28};
   font-weight: 700;
   text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.fs22};
+  }
+`;
+
+const ImageOP = styled.img`
+  padding: 40px 0 0 0;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* 데스크탑 화면에서 기본 이미지 */
+  src: url("ssrc/assets/images/section2_domino.svg");
+
+  /* 모바일 화면에서 다른 이미지 */
+  @media (max-width: 768px) {
+    width: 100%; /* 크기 줄이기, 원하는 비율로 조정 */
+    height: auto; /* 비율 유지 */;
+    src: url("src/assets/images/mo_section2_domino.svg");
+  }
 `;
 
 const Info1 = () => {
@@ -69,8 +81,11 @@ const Info1 = () => {
       <div>
         <HeaderWrapper>
           <Image src="src/assets/images/icon_question.svg" alt="image1" />
-          <Texth2>다양한 건강식 메뉴를<br />
-          외식으로 찾기 어려우신가요?</Texth2>
+          <Texth2>
+            다양한 건강식 메뉴를
+            <br />
+            외식으로 찾기 어려우신가요?
+          </Texth2>
         </HeaderWrapper>
 
         <ImageOP

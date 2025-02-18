@@ -14,7 +14,7 @@ const CategoryCard = styled.div`
 
 // 카테고리 카트 이미지 스타일
 const CategoryCardImage = styled.img`
- @media (max-width: 768px) {
+ @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 60px;
     height: 60px;
   }
@@ -26,7 +26,7 @@ const CategoryCardText = styled.p`
   font-weight: 500;
   line-height: 1.5;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.fs12};
   }
 `;

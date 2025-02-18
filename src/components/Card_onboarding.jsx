@@ -12,6 +12,7 @@ const OnboardingCard = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     flex-direction: column;
+    gap: 24px;
   }
 `;
 
@@ -25,7 +26,7 @@ const OnboardingTextWrapper = styled.div`
   gap: 20px;
   order: 2;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     order: 1;
   }
 `;
@@ -38,7 +39,7 @@ const OnboardingCardImage = styled.img`
   border: none;
   order: 1;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     order: 2;
   }
 `;
@@ -49,7 +50,7 @@ const OnboardingCardText = styled.p`
   color: ${({ theme }) => theme.colors.grey600};
   line-height: 1.5;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.fs14};
   }
 `;
@@ -58,7 +59,7 @@ const OnboardingCardTitle = styled.h4`
   white-space: pre-line;
   line-height: 1.5;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.fs22};
   }
 `;

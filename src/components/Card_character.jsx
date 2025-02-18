@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const PlantWrapper = styled.div`
-  background-color: #FFF7F2; /* 색상에 따옴표가 필요없음 */
+  background-color: #fff7f2; /* 색상에 따옴표가 필요없음 */
   padding: 4px; /* 따옴표가 필요 없음 */
   border-radius: 9px; /* 따옴표가 필요 없음 */
   display: inline-block;
@@ -47,7 +47,6 @@ const TextP2 = styled.a`
   text-align: center;
 `;
 
-
 const ICONWrapper = styled.div`
   display: flex; /* flexbox로 설정 */
   flex-direction: row;
@@ -67,11 +66,6 @@ const SmallWrapper = styled.div`
 `;
 
 const Card_character = ({ text1, text2, icons, plant }) => {
-  console.log(text1);
-  console.log(text2);
-  console.log(plant);
-  console.log(icons);
-
   return (
     <Wrapper>
       <PlantWrapper>

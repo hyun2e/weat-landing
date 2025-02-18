@@ -12,14 +12,14 @@ const ReviewContainer = styled.div`
   gap: 40px;
   position: relative;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-   gap: 30px;
+    gap: 30px;
   }
 `;
 
 const ReviewTitle = styled.h2`
   line-height: 1.5;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        font-size: ${({ theme }) => theme.fontSizes.fs22};
+    font-size: ${({ theme }) => theme.fontSizes.fs22};
   }
 `;
 
@@ -37,8 +37,8 @@ const CardListWrapper = styled.div`
   justify-content: flex-start;
   margin: 0 auto;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding:20px;
-    gap:24px;
+    gap: 24px;
+    margin-left: 20px;
   }
 `;
 
@@ -46,10 +46,12 @@ const CardListContents = styled.div`
   display: flex;
   flex-direction: column;
   gap: 36px;
+  margin-right: 20px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     flex-direction: row;
     align-items: stretch;
+    gap: 0px;
   }
 `;
 

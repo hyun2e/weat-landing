@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 // 카드와 텍스트를 감싸는 영역입니다.
 const QuizWrapper = styled.div`
   width: 100%;
-  height: 400px;
+  height: 275px;
   gap: 30px;
   padding: 40px 16px 20px 16px;
   margin: auto;
@@ -29,13 +29,14 @@ const QuizWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     flex-direction: column;
+    height: 400px;
   }
 `;
 
 // 카드들을 담는 영역입니다.
 // position: relative; 를 사용하여 내부 카드들의 위치를 조절합니다.
 const QuizCardWrapper = styled.div`
-  width: 100%;
+  width: 324px;
   height: 100%;
   position: relative;
   overflow: visible; /* 카드가 움직여도 잘 보이게 합니다 */

@@ -10,7 +10,7 @@ const DownloadWrapper = styled.div`
     gap:30px;
     padding: 0 16px 52px 16px;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         padding: 0 38px 0 0;
     };
 `
@@ -27,7 +27,7 @@ const DownloadButton = styled.a`
 `
 // 다운로드 버튼 이미지 스타일
 const DownloadButtonImage = styled.img`
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         width: 156px;
         height: 52px;
         border-radius: 26px;
@@ -40,7 +40,7 @@ const DownloadButtonWrapper = styled.div`
     justify-content: center;
     gap: 12px;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         width: 318px;
         gap: 7px;
   }
@@ -57,7 +57,7 @@ const DownloadTextWrapper = styled.div`
 const DownloadTitle = styled.h2`
     line-height: 1.5;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         font-size: ${({ theme }) => theme.fontSizes.fs22};
   }
 `
@@ -66,7 +66,7 @@ const DownloadDescription = styled.p`
     color: ${({ theme }) => theme.colors.grey600};
     line-height: 1.5;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         font-size: ${({ theme }) => theme.fontSizes.fs14};
   }
 `

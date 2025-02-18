@@ -16,14 +16,14 @@ const Info2Card = styled.div`
   flex-shrink: 0;
   flex-grow: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     height: 50px;
     padding: 6px 12px 6px 7px;
   }
 `;
 
 const Info2CardImage = styled.img`
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 33.6px;
     height: 33.6px;
   }
@@ -37,7 +37,7 @@ const Info2CardText = styled.p`
   line-height: 1.5;
   overflow: visible;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.fs10};
   }
 `

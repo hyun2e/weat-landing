@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
   left: 50%;
   transform: translateX(-50%);
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         padding: 30px 20px;
   }
 `
@@ -24,7 +24,7 @@ const FooterContents = styled.div`
   align-items: top;
   justify-content: space-between;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         flex-direction: column;
         gap: 20px;
   }

@@ -13,7 +13,7 @@ const CategoryContainer = styled.div`
     gap: 40px;
     padding: 0 16px;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         padding: 0 40px;
   }
 `
@@ -26,7 +26,7 @@ const CategoryContents = styled.div`
     justify-content: center;
     gap: 40px;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         gap: 20px;
   }
 `
@@ -40,7 +40,7 @@ const CategoryTextWrapper = styled.div`
 const CategoryTitle = styled.h2`
     line-height: 1.5;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.fs22};
   }
 `
@@ -49,7 +49,7 @@ const CategoryDescription = styled.p`
     color: ${({ theme }) => theme.colors.grey600};
     line-height: 1.5;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.fs14};
   }
 `
@@ -61,9 +61,9 @@ const CategoryCardWrapper = styled.div`
     justify-content: center;
     gap: 28px;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         width: 396px;
-        gap: 24px;
+        gap: 12px;
     }
 `
 

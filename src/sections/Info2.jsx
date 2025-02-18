@@ -15,7 +15,8 @@ const Info2Container = styled.div`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  @media (max-width: 768px) {
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     gap: 24px;
   }
 `;
@@ -23,7 +24,7 @@ const Info2Container = styled.div`
 const Info2Title = styled.h2`
   line-height: 1.5;
   margin: 0;
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.fs22};
   }
 `;
@@ -34,7 +35,7 @@ const Info2DataContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     gap: 12px;
   }
 `;
@@ -78,7 +79,7 @@ const Info2 = () => {
     <Info2Container>
       <Info2Title>Weat에서 다 해결했어요</Info2Title>
       <Info2DataContainer>
-        <InfiniteScrollWrapper direction="left" speed={50}>
+        <InfiniteScrollWrapper direction="left" speed={20}>
           {info2DataTop.map((item, index) => (
             <Card_Info2
               key={`top-${index}`}
@@ -87,7 +88,7 @@ const Info2 = () => {
             />
           ))}
         </InfiniteScrollWrapper>
-        <InfiniteScrollWrapper direction="right" speed={50}>
+        <InfiniteScrollWrapper direction="right" speed={20}>
           {info2DataBottom.map((item, index) => (
             <Card_Info2
               key={`bottom-${index}`}

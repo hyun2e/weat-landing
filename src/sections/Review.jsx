@@ -14,6 +14,11 @@ const ReviewContainer = styled.div`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  overflow: hidden;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    flex-direction: row;
+  }
 `;
 const ReviewTitle = styled.h2`
   line-height: 1.5;
@@ -28,6 +33,10 @@ const CardListContents = styled.div`
   display: flex;
   flex-direction: column;
   gap: 36px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    flex-direction: row;
+  }
 `;
 
 function Review() {

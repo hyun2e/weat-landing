@@ -10,6 +10,10 @@ const OnboardingContainer = styled.div`
   width: 800px;
   gap: 40px;
   padding: 16px 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+  }
 `;
 
 const Onboarding = () => {

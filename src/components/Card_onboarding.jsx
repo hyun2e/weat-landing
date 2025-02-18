@@ -8,11 +8,10 @@ const OnboardingCard = styled.div`
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  width:100%;
+  width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     flex-direction: column;
-    gap: 24px;
   }
 `;
 
@@ -23,7 +22,7 @@ const OnboardingTextWrapper = styled.div`
   align-items: center;
   text-align: center;
   width: 401px;
-  gap:20px;
+  gap: 20px;
   order: 2;
 
   @media (max-width: 768px) {
@@ -39,10 +38,10 @@ const OnboardingCardImage = styled.img`
   border: none;
   order: 1;
 
-@media (max-width: 768px) {
-  order: 2;
-}
-`
+  @media (max-width: 768px) {
+    order: 2;
+  }
+`;
 
 // 온보딩 텍스트 - 본문
 const OnboardingCardText = styled.p`
@@ -53,7 +52,7 @@ const OnboardingCardText = styled.p`
   @media (max-width: 768px) {
     font-size: ${({ theme }) => theme.fontSizes.fs14};
   }
-`
+`;
 // 온보딩 텍스트 - 제목
 const OnboardingCardTitle = styled.h4`
   white-space: pre-line;
@@ -62,10 +61,9 @@ const OnboardingCardTitle = styled.h4`
   @media (max-width: 768px) {
     font-size: ${({ theme }) => theme.fontSizes.fs22};
   }
-`
+`;
 
-
-const Card_onboarding = ({icon,title,text}) => {
+const Card_onboarding = ({ icon, title, text }) => {
   return (
     <OnboardingCard>
       <OnboardingCardImage src={icon} />

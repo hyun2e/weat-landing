@@ -66,6 +66,10 @@ const LeftArrow = styled.img`
   cursor: pointer;
   user-select: none;
   z-index: 10;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    visibility: hidden;
+  }
 `;
 
 // 우측 화살표 버튼

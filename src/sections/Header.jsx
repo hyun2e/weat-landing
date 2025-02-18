@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useState } from 'react';
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -15,6 +16,11 @@ const HeaderContainer = styled.header`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 70px;
+    padding: 19px 20px;
+  }
 `;
 
 const Logo = styled.a`
@@ -31,6 +37,15 @@ const HeaderButtons = styled.div`
   display: flex;
   align-items: center;
   gap: 24px;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    visibility: hidden;
+  }
 `
 
 const HeaderLink = styled.a`
@@ -51,19 +66,72 @@ const HeaderLink = styled.a`
   }
 `
 
+const HamburgerButton = styled.div`
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: block;
+  }
+`
+const MobileMenu = styled.div`
+  position: absolute;
+  top: 80px;
+  right: 32px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid ${({ theme }) => theme.colors.grey250};
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  z-index: 999;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    top: 70px;
+    right: 20px;
+  }
+
+  a {
+    display: block;
+    padding: 12px 20px;
+    color: ${({ theme }) => theme.colors.grey600};
+    text-decoration: none;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.grey600};
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.grey900};
+    }
+  }
+`;
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+
   return (
     <HeaderContainer>
       <Logo>
         <img src="src/assets/images/logo_typo.svg" alt="위잇트 로고" />
       </Logo>
-      <HeaderButtons>
+      <HeaderButtons onClick={toggleMenu}>
         <HeaderLink href="/about">위잇트 소개</HeaderLink>
         <HeaderLink href="/community">커뮤니티</HeaderLink>
         <HeaderLink href="/challenge">챌린지</HeaderLink>
         <HeaderLink href="/download">다운로드</HeaderLink>
       </HeaderButtons>
+      <HamburgerButton>
+        <img src="src/assets/images/burger-menu.svg" alt="메뉴" />
+      </HamburgerButton>
+      <MobileMenu isOpen={menuOpen}>
+        <a href="/about">위잇트 소개</a>
+        <a href="/community">커뮤니티</a>
+        <a href="/challenge">챌린지</a>
+        <a href="/download">다운로드</a>
+      </MobileMenu>
     </HeaderContainer>
   );
 };

@@ -8,7 +8,7 @@ export const HeroButton1 = styled.a`
   font-family: ${({ theme }) => theme.fonts.main};
   font-size: ${({ theme }) => theme.fontSizes.fs18};
   font-weight: 600;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: ${({ theme }) => theme.colors.primary};
   border: none;
   border-radius: 30px;
@@ -71,6 +71,7 @@ export const OutlineButton = styled.a`
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: center;
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.white};

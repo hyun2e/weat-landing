@@ -5,28 +5,31 @@ import styled from "styled-components";
 
 const ReviewContainer = styled.div`
   width: 100%;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-  justify-content: center;
   gap: 40px;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    flex-direction: row;
-  }
 `;
+
 const ReviewTitle = styled.h2`
   line-height: 1.5;
+`;
+
+const CardSlideWrapper = styled.div`
+  width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    overflow: scroll;
+  }
 `;
 
 const CardListWrapper = styled.div`
   display: flex;
   gap: 36px;
+  justify-content: flex-start;
+  margin: 0 auto;
 `;
 
 const CardListContents = styled.div`
@@ -36,6 +39,7 @@ const CardListContents = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     flex-direction: row;
+    align-items: stretch;
   }
 `;
 
@@ -108,16 +112,18 @@ function Review() {
       </ReviewTitle>
 
       {/* 리뷰 카드 리스트 */}
-      <CardListContents>
-        <CardListWrapper>
-          <Card_review review={reviews[0]} />
-          <Card_review review={reviews[1]} />
-        </CardListWrapper>
-        <CardListWrapper>
-          <Card_review review={reviews[2]} />
-          <Card_review review={reviews[3]} />
-        </CardListWrapper>
-      </CardListContents>
+      <CardSlideWrapper>
+        <CardListContents>
+          <CardListWrapper>
+            <Card_review review={reviews[0]} />
+            <Card_review review={reviews[1]} />
+          </CardListWrapper>
+          <CardListWrapper>
+            <Card_review review={reviews[2]} />
+            <Card_review review={reviews[3]} />
+          </CardListWrapper>
+        </CardListContents>
+      </CardSlideWrapper>
 
       {/* 리뷰 더 보기 버튼 */}
       <Button type="outline-btn" href="/characters">

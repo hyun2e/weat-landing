@@ -1,19 +1,7 @@
 import React from 'react';
 import Card_category from '../components/Card_category';
 import styled from 'styled-components';
-import { keyframes } from "styled-components";
-import { useState } from 'react';
-import { useEffect } from 'react';
 
-
-const InfiniteScrollRightC = keyframes`
-  0% {transform: translateX(0);}
-  100% {transform: translateX(-100%);}
-`;
-const InfiniteScrollLeftC = keyframes`
-  0% {transform: translateX(0);}
-  100% {transform: translateX(100%);}
-`;
 
 const CategoryContainer = styled.div`
     width: 100%;
@@ -66,7 +54,7 @@ const CategoryDescription = styled.p`
   }
 `
 
-const CategoryCardWrapperTop = styled.div`
+const CategoryCardWrapper = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,22 +64,7 @@ const CategoryCardWrapperTop = styled.div`
     @media (max-width: 768px) {
         width: 396px;
         gap: 24px;
-        animation: ${InfiniteScrollRightC} 70s linear infinite;
-  }
-`
-
-const CategoryCardWrapperBottom = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-
-    @media (max-width: 768px) {
-        width: 396px;
-        gap: 24px;
-        animation: ${InfiniteScrollLeftC} 70s linear infinite;
-  }
+    }
 `
 
 const Category = () => {
@@ -110,18 +83,6 @@ const Category = () => {
         { icon: "src/assets/images/category_event.svg", text: "EVENT" },
     ];
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-    useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
-    const repeatedDataTopC = isMobile ? Array(6).fill(categoryDataTop).flat() : categoryDataTop;
-    const repeatedDataBottomC = isMobile ? Array(6).fill(categoryDataBottom).flat() : categoryDataBottom;
-
-
     return (
         <CategoryContainer>
             <CategoryTextWrapper>
@@ -135,16 +96,16 @@ const Category = () => {
                 </CategoryDescription>
             </CategoryTextWrapper>
             <CategoryContents>
-                <CategoryCardWrapperTop>
-                    {repeatedDataTopC.map((item, index) => (
+                <CategoryCardWrapper>
+                    {categoryDataTop.map((item, index) => (
                         <Card_category icon={item.icon} text={item.text} key={index} />
                     ))}
-                </CategoryCardWrapperTop>
-                <CategoryCardWrapperBottom>
-                    {repeatedDataBottomC.map((item, index) => (
+                </CategoryCardWrapper>
+                <CategoryCardWrapper>
+                    {categoryDataBottom.map((item, index) => (
                         <Card_category icon={item.icon} text={item.text} key={index} />
                     ))}
-                </CategoryCardWrapperBottom>
+                </CategoryCardWrapper>
             </CategoryContents>
         </CategoryContainer>
     );

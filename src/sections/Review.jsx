@@ -15,6 +15,9 @@ const ReviewContainer = styled.div`
 
 const ReviewTitle = styled.h2`
   line-height: 1.5;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        font-size: ${({ theme }) => theme.fontSizes.fs22};
+  }
 `;
 
 const CardSlideWrapper = styled.div`

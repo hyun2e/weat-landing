@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { useState } from 'react';
 
 const HeaderContainer = styled.header`
-  position: fixed;
   top: 0;
   width: 100vw;
   height: 80px;
@@ -18,6 +17,7 @@ const HeaderContainer = styled.header`
   transform: translateX(-50%);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: auto;
     height: 70px;
     padding: 19px 20px;
   }

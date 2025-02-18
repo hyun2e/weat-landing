@@ -30,8 +30,8 @@ const Slide = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  top: 35%;
+  justify-content: flex-end;
+  padding-bottom: 210px;
   font-size: 32px;
   color: white;
   gap: 20px;

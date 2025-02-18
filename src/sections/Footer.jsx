@@ -51,6 +51,10 @@ const FooterTab = styled.a`
   &:hover {
     color: ${({ theme }) => theme.colors.secondary};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.fs14};
+  }
 `;
 
 // 푸터 내용 스타일
@@ -65,6 +69,10 @@ const FooterDetail = styled.a`
   color: ${({ theme }) => theme.colors.grey250};
   font-size: ${({ theme }) => theme.fontSizes.fs14};
   line-height: 1.5;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.fs11};
+  }
 `
 
 const FooterIconWrapper = styled.div`
@@ -77,6 +85,16 @@ const FooterIconButton = styled.a`
   justify-content: center;
   background-color: none;
 `
+const FooterIconimg = styled.img`
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 24px;
+    height: 24px;
+  }
+`
+
 
 const Footer = () => {
   return (
@@ -110,13 +128,13 @@ const Footer = () => {
 
         <FooterIconWrapper>
           <FooterIconButton href="https://www.youtube.com" target="_blank">
-            <img src="src/assets/images/icon_youtube.svg" alt="YouTube" />
+            <FooterIconimg src="src/assets/images/icon_youtube.svg" alt="YouTube" />
           </FooterIconButton>
           <FooterIconButton href="https://www.instagram.com" target="_blank">
-            <img src="src/assets/images/icon_insta.svg" alt="Instagram" />
+            <FooterIconimg src="src/assets/images/icon_insta.svg" alt="Instagram" />
           </FooterIconButton>
           <FooterIconButton>
-            <img src="src/assets/images/icon_airplane.svg" alt="Message" />
+            <FooterIconimg src="src/assets/images/icon_airplane.svg" alt="Message" />
           </FooterIconButton>
         </FooterIconWrapper>
       </FooterContents>

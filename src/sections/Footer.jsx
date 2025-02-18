@@ -11,6 +11,10 @@ const FooterContainer = styled.div`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (max-width: 768px) {
+        padding: 30px 20px;
+  }
 `
 const FooterContents = styled.div`
   width: 800px;
@@ -19,6 +23,11 @@ const FooterContents = styled.div`
   flex-direction: row;
   align-items: top;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+  }
 `
 const FooterTextWrapper = styled.div`
   display: flex;

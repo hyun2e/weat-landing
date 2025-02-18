@@ -31,10 +31,10 @@ const Slide = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 210px;
+  padding-bottom: 180px;
   font-size: 32px;
   color: white;
-  gap: 20px;
+  gap: 30px;
 `;
 
 const UnvisibleDiv = styled.div`
@@ -52,6 +52,7 @@ const HeroContent = styled.p`
   font-size: 18px;
   text-align: center;
   color: ${({ isActive }) => (isActive ? "#ffffff" : "#1A1A1A")};
+  gap: 16px;
 `;
 
 // 좌측 화살표 버튼

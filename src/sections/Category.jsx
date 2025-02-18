@@ -62,7 +62,7 @@ const CategoryCardWrapper = styled.div`
     gap: 28px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        width: 396px;
+        width: 348px;
         gap: 12px;
     }
 `

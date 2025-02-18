@@ -65,6 +65,9 @@ const slides = [
 const ContentWrapper = styled.div`
   max-width: 800px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 `;
 
 const Section = styled.section`
@@ -90,11 +93,13 @@ const App = () => {
       <>
         <GlobalStyle />
         <ContentWrapper>
-          <Header />
-          <Section id="section-hero">
-            <Slider slides={slides} auto={true} duration={10} />
-          </Section>
-          <Info1 />
+          <div>
+            <Header />
+            <Section id="section-hero">
+              <Slider slides={slides} auto={true} duration={10} />
+            </Section>
+            <Info1 />
+          </div>
           <Info2 />
           <Onboarding />
           <Category />

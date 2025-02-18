@@ -58,6 +58,10 @@ const UnvisibleDiv = styled.div`
 const TitleWrapper = styled.div`
   display: flex;
   gap: 8px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.h1`
@@ -70,7 +74,14 @@ const Title = styled.h1`
   }
 `;
 
-const ContentWrapper = styled.div``;
+const ContentWrapper = styled.div`
+  display: flex;
+  gap: 4px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+      flex-direction: column;
+    }
+`;
 
 const HeroContent = styled.p`
   font-size: 18px;

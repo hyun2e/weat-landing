@@ -63,7 +63,6 @@ const slides = [
 ];
 
 const ContentWrapper = styled.div`
-  max-width: 800px;
   margin: auto;
   display: flex;
   flex-direction: column;

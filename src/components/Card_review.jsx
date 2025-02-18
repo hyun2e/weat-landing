@@ -24,6 +24,13 @@ const CardContainer = styled.div`
   &:hover {
     transform: scale(1.1); /* 1.1배 확대 */
   }
+  /* ✅ 미디어 쿼리: 모바일에서는 호버 제거 */
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    /* ✅ 모바일에서는 호버 효과 제거 */
+    &:hover {
+      transform: none; /* 확대 효과 제거 */
+    }
+  }
 `;
 
 /* 카드 내부 텍스트 영역 */
@@ -32,6 +39,7 @@ const CardWrapper = styled.div`
   padding: 20px;
   box-sizing: border-box;
   text-align: left; /* ✅ 카드 내부 텍스트 좌측 정렬 */
+
 `;
 
 /* 카드 이미지 */

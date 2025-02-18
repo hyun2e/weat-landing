@@ -30,6 +30,10 @@ const CardListWrapper = styled.div`
   gap: 36px;
   justify-content: flex-start;
   margin: 0 auto;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding:20px;
+    gap:24px;
+  }
 `;
 
 const CardListContents = styled.div`

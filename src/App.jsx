@@ -103,7 +103,6 @@ const App = () => {
         <ContentWrapper>
         <Header />
           <div>
-            <Header />
             <Section id="section-hero">
               <Slider slides={slides} auto={true} duration={10} />
             </Section>

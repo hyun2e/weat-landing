@@ -24,8 +24,10 @@ const slides = [
     id: 1,
     src: "src/assets/images/PC_hero_1.png",
     mobileImage: "src/assets/images/MO_hero_1.png",
-    title: "건강식을 찾고 있다면 위잇트에서 찾아보세요!",
-    content: "당신만을 위한 맞춤형 건강식당 서비스",
+    title1: "건강식을 찾고 있다면 ",
+    title2: "위잇트에서 찾아보세요!",
+    content1: "당신만을 위한 ",
+    content2: "맞춤형 건강식당 서비스",
     button: {
       type: "hero-btn1",
       href: "https://www.naver.com",
@@ -74,8 +76,8 @@ const ContentWrapper = styled.div`
   gap: 150px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    gap:64px;
-  };
+    gap: 64px;
+  }
 `;
 
 const Section = styled.section`
@@ -90,8 +92,7 @@ const Section = styled.section`
 
   /* 반응형 스타일: 모바일 화면 (화면 폭 <= 768px)에서는 높이와 폰트 크기를 조정 */
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    height: 300px;
-    font-size: 20px;
+    height: 440px;
   }
 `;
 
@@ -100,21 +101,21 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
-        <ContentWrapper>
         <Header />
+        <ContentWrapper>
           <div>
             <Section id="section-hero">
               <Slider slides={slides} auto={true} duration={10} />
             </Section>
-            <Info1 id="section-about"/>
+            <Info1 id="section-about" />
           </div>
           <Info2 />
           <Onboarding />
           <Category />
-          <Review id="section-community"/>
-          <Quiz id="section-challenge"/>
+          <Review id="section-community" />
+          <Quiz id="section-challenge" />
           <Character />
-          <Download id="section-download"/>
+          <Download id="section-download" />
           <Footer />
         </ContentWrapper>
       </>

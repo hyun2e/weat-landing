@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useState } from 'react';
+import React from "react";
+import styled from "styled-components";
+import { useState } from "react";
 const HeaderContainer = styled.header`
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 80px;
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
@@ -11,9 +11,8 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   padding: 20px 32px 16px 32px;
   z-index: 1000;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  position: sticky;
+  top: 0px;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: auto;
     height: 70px;
@@ -28,7 +27,7 @@ const Logo = styled.a`
     width: 100%;
     height: 100%;
   }
-`
+`;
 const HeaderButtons = styled.div`
   display: flex;
   align-items: center;
@@ -40,7 +39,7 @@ const HeaderButtons = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     visibility: hidden;
   }
-`
+`;
 const HeaderLink = styled.a`
   color: ${({ theme }) => theme.colors.grey600};
   font-family: ${({ theme }) => theme.fonts.main};
@@ -55,14 +54,14 @@ const HeaderLink = styled.a`
   &:focus {
     font-weight: 600;
   }
-`
+`;
 const HamburgerButton = styled.div`
   display: none;
   cursor: pointer;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: block;
   }
-`
+`;
 const MobileMenu = styled.div`
   position: absolute;
   top: 80px;
@@ -71,7 +70,7 @@ const MobileMenu = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.grey250};
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   z-index: 999;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     top: 70px;

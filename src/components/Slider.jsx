@@ -11,19 +11,27 @@ const SliderContainer = styled.div`
   width: 100%;
   height: 500px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 440px; /* 모바일 화면 높이 조정 */
+  }
 `;
 
 // 슬라이드들을 감싸는 래퍼 (가로로 나열)
 const SlideWrapper = styled.div`
   display: flex;
+  height: 500px;
   transition: transform 0.5s ease-in-out;
   transform: translateX(${(props) => props.translate}%);
+
+  @media (max-width: 768px) {
+    height: 440px; /* 모바일 화면 높이 조정 */
+  }
 `;
 
 // 개별 슬라이드 (배경 이미지로 src 프롭 사용)
 const Slide = styled.div`
   min-width: 100%;
-  height: 500px;
   background-image: url(${(props) => props.image});
   background-size: cover;
   background-position: center;
@@ -35,17 +43,21 @@ const Slide = styled.div`
   font-size: 32px;
   color: white;
   gap: 30px;
-  
-  @media (max-width: 768px) {
-    background-image: url(${(props) => props.mobileImage}); /* 모바일용 이미지 */
-    height: 440px; /* 모바일 화면 높이 조정 */
-    
-  }
 
+  @media (max-width: 768px) {
+    background-image: url(${(props) =>
+      props.mobileimage}); /* 모바일용 이미지 */
+    height: 440px; /* 모바일 화면 높이 조정 */
+  }
 `;
 
 const UnvisibleDiv = styled.div`
   height: 60px;
+`;
+
+const TitleWrapper = styled.div`
+  display: flex;
+  gap: 8px;
 `;
 
 const Title = styled.h1`
@@ -57,6 +69,8 @@ const Title = styled.h1`
     font-size: 22px;
   }
 `;
+
+const ContentWrapper = styled.div``;
 
 const HeroContent = styled.p`
   font-size: 18px;
@@ -101,7 +115,6 @@ const RightArrow = styled.img`
     visibility: hidden;
   }
 `;
-
 
 // 도트 네비게이션 컨테이너
 const DotsContainer = styled.div`
@@ -163,9 +176,20 @@ const Slider = ({ slides, auto = false, duration = 10 }) => {
           const isActive = index === 1;
 
           return (
-            <Slide key={index} index={index} image={slide.src} mobileImage={slide.mobileImage}>
-              <Title isActive={isActive}>{slide.title}</Title>
-              <HeroContent isActive={isActive}>{slide.content}</HeroContent>
+            <Slide
+              key={index}
+              index={index}
+              image={slide.src}
+              mobileimage={slide.mobileImage}
+            >
+              <TitleWrapper>
+                <Title isActive={isActive}>{slide.title1}</Title>
+                <Title isActive={isActive}>{slide.title2}</Title>
+              </TitleWrapper>
+              <ContentWrapper>
+                <HeroContent isActive={isActive}>{slide.content1}</HeroContent>
+                <HeroContent isActive={isActive}>{slide.content2}</HeroContent>
+              </ContentWrapper>
               {/* slide.button이 있다면 Button을 보여줘라 */}
               {slide.button ? (
                 <Button type={slide.button.type} href={slide.button.href}>

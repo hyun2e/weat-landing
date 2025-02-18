@@ -33,7 +33,17 @@ const CharacterWrapper = styled.div`
   justify-content: center; /* 가로 가운데 정렬 */
   text-align: center;
   gap: 10px; /* 이미지 간의 간격 */
+
+  img {
+    transition: transform 0.3s ease; /* 부드러운 호버 효과 */
+  }
+
+  img:hover {
+    transform: scale(1.1); /* 호버 시 이미지 크기 확대 */
+  }
 `;
+
+
 
 const Texth2 = styled.a`
   color: ${({ theme }) => theme.colors.grey900};

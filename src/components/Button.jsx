@@ -11,7 +11,7 @@ export const HeroButton1 = styled.a`
   color: #FFFFFF;
   background-color: ${({ theme }) => theme.colors.primary};
   border: none;
-  border-radius: 24px;
+  border-radius: 30px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -29,7 +29,7 @@ export const HeroButton2 = styled.a`
   color: ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.white};
   border: none;
-  border-radius: 24px;
+  border-radius: 30px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -47,7 +47,7 @@ export const HeroButton3 = styled.a`
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.secondary};
   border: none;
-  border-radius: 24px;
+  border-radius: 30px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -66,7 +66,7 @@ export const OutlineButton = styled.a`
   color: ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.primary200};
-  border-radius: 22px;
+  border-radius: 28px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;

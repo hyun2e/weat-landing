@@ -14,7 +14,7 @@ const HeaderContainer = styled.header`
   position: sticky;
   top: 0px;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    width: auto;
+    width: 100%;
     height: 70px;
     padding: 19px 20px;
   }

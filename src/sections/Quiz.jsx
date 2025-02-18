@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 const QuizWrapper = styled.div`
   width: 100%;
   height: 275px;
-  gap: 30px;
+  gap: 40px;
   padding: 30px 16px 20px 16px;
   margin: auto;
   display: flex;
@@ -45,7 +45,7 @@ const QuizCardWrapper = styled.div`
 
 const Texth2 = styled.a`
   color: ${({ theme }) => theme.colors.grey900};
-  font-size: ${({ theme }) => theme.fontSizes.fs16};
+  font-size: ${({ theme }) => theme.fontSizes.fs28};
   font-weight: 700;
   line-height: 1.5; /* 1.5배 간격 */
   text-align: center;

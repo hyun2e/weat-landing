@@ -39,7 +39,7 @@ const Slide = styled.div`
   @media (max-width: 768px) {
     background-image: url(${(props) => props.mobileImage}); /* 모바일용 이미지 */
     height: 440px; /* 모바일 화면 높이 조정 */
-    /* margin-top: 116px; */
+    
   }
 
 `;

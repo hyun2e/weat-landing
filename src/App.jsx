@@ -23,6 +23,7 @@ const slides = [
   {
     id: 1,
     src: "src/assets/images/PC_hero_1.png",
+    mobileImage: "src/assets/images/MO_hero_1.png",
     title: "건강식을 찾고 있다면 위잇트에서 찾아보세요!",
     content: "당신만을 위한 맞춤형 건강식당 서비스",
     button: {
@@ -33,6 +34,7 @@ const slides = [
   {
     id: 2,
     src: "src/assets/images/PC_hero_2.png",
+    mobileImage: "src/assets/images/MO_hero_2.png",
     title: "샐러드만 건강식이라는 생각은 NO!",
     content: "위잇트에서 다양하고 맛있는 건강식의 세계를 보여드릴게요",
     button: {
@@ -42,12 +44,14 @@ const slides = [
   {
     id: 3,
     src: "src/assets/images/PC_hero_3.png",
+    mobileImage: "src/assets/images/MO_hero_3.png",
     title: "지도로 한눈에 보기 쉬운 맛집탐방",
     content: "당신만을 위한 맞춤형 건강식당 서비스",
   },
   {
     id: 4,
     src: "src/assets/images/PC_hero_4.png",
+    mobileImage: "src/assets/images/MO_hero_4.png",
     title: "퀴즈도 풀고, 건강식 정보도 얻고",
     content: "퀴즈에서 얻은 포인트로 귀여운 캐릭터 지금 만나러 가보실까요?",
     button: {
@@ -57,6 +61,7 @@ const slides = [
   {
     id: 5,
     src: "src/assets/images/PC_hero_5.png",
+    mobileImage: "src/assets/images/MO_hero_5.png",
     title: "위잇트에서 더 많은 이야기를 나눠보세요",
     content: "식당 리뷰와 건강식 레시피를 공유하며 더 건강하게!",
   },

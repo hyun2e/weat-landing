@@ -35,6 +35,13 @@ const Slide = styled.div`
   font-size: 32px;
   color: white;
   gap: 30px;
+  
+  @media (max-width: 768px) {
+    background-image: url(${(props) => props.mobileImage}); /* 모바일용 이미지 */
+    height: 440px; /* 모바일 화면 높이 조정 */
+    /* margin-top: 116px; */
+  }
+
 `;
 
 const UnvisibleDiv = styled.div`
@@ -46,6 +53,9 @@ const Title = styled.h1`
   text-align: center;
   font-weight: bold;
   color: ${({ isActive }) => (isActive ? "#ffffff" : "#1A1A1A")};
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 22px;
+  }
 `;
 
 const HeroContent = styled.p`
@@ -53,6 +63,9 @@ const HeroContent = styled.p`
   text-align: center;
   color: ${({ isActive }) => (isActive ? "#ffffff" : "#1A1A1A")};
   gap: 16px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 16px;
+  }
 `;
 
 // 좌측 화살표 버튼
@@ -83,7 +96,12 @@ const RightArrow = styled.img`
   cursor: pointer;
   user-select: none;
   z-index: 10;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    visibility: hidden;
+  }
 `;
+
 
 // 도트 네비게이션 컨테이너
 const DotsContainer = styled.div`
@@ -145,7 +163,7 @@ const Slider = ({ slides, auto = false, duration = 10 }) => {
           const isActive = index === 1;
 
           return (
-            <Slide key={index} index={index} image={slide.src}>
+            <Slide key={index} index={index} image={slide.src} mobileImage={slide.mobileImage}>
               <Title isActive={isActive}>{slide.title}</Title>
               <HeroContent isActive={isActive}>{slide.content}</HeroContent>
               {/* slide.button이 있다면 Button을 보여줘라 */}

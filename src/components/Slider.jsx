@@ -58,6 +58,10 @@ const UnvisibleDiv = styled.div`
 const TitleWrapper = styled.div`
   display: flex;
   gap: 8px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.h1`

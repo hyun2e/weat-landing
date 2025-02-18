@@ -103,19 +103,19 @@ const App = () => {
         <ContentWrapper>
         <Header />
           <div>
-            
+            <Header />
             <Section id="section-hero">
               <Slider slides={slides} auto={true} duration={10} />
             </Section>
-            <Info1 />
+            <Info1 id="section-about"/>
           </div>
           <Info2 />
           <Onboarding />
           <Category />
-          <Review />
-          <Quiz />
+          <Review id="section-community"/>
+          <Quiz id="section-challenge"/>
           <Character />
-          <Download />
+          <Download id="section-download"/>
           <Footer />
         </ContentWrapper>
       </>

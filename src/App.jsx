@@ -71,7 +71,11 @@ const ContentWrapper = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 150px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    gap:64px;
+  };
 `;
 
 const Section = styled.section`

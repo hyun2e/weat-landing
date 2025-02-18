@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 const CardWrapper = styled.div`
   margin: auto;
   display: grid;
-  gap: 24px 18px; /* 상하 간격 24px, 좌우 간격 6px */
+  gap: 6px 24px; /* 상하 간격 24px, 좌우 간격 6px */
   grid-template-columns: repeat(2, 1fr); /* 3개의 이미지를 가로로 나열 */
   grid-template-rows: repeat(1, 1fr); /* 2개의 행을 세로로 나열 */
   align-items: center;

@@ -23,6 +23,11 @@ const CardWrapper = styled.div`
   align-items: center;
   justify-content: center; /* 가로 가운데 정렬 */
   text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const CharacterWrapper = styled.div`
@@ -41,6 +46,11 @@ const CharacterWrapper = styled.div`
   img:hover {
     transform: scale(1.1); /* 호버 시 이미지 크기 확대 */
   }
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    gap: 0px; /* 이미지 간의 간격 */
+  }
+
 `;
 
 
@@ -50,6 +60,10 @@ const Texth2 = styled.a`
   font-size: ${({ theme }) => theme.fontSizes.fs28};
   font-weight: 700;
   text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.fs22};
+  }
 `;
 
 const Texth3 = styled.a`
@@ -57,6 +71,10 @@ const Texth3 = styled.a`
   font-size: ${({ theme }) => theme.fontSizes.fs24};
   font-weight: 500;
   text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.fs16};
+  }
 `;
 
 const TextP = styled.a`
@@ -64,6 +82,10 @@ const TextP = styled.a`
   font-size: ${({ theme }) => theme.fontSizes.fs18};
   font-weight: 400;
   text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.fs14};
+  }
 `;
 
 const TextWrapper = styled.div`

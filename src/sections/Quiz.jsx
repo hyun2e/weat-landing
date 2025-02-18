@@ -41,12 +41,28 @@ const QuizCardWrapper = styled.div`
   overflow: visible; /* 카드가 움직여도 잘 보이게 합니다 */
 `;
 
+const Texth2 = styled.a`
+  color: ${({ theme }) => theme.colors.grey900};
+  font-size: ${({ theme }) => theme.fontSizes.fs16};
+  font-weight: 700;
+  line-height: 1.5; /* 1.5배 간격 */
+  text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.fs22};
+  }
+`;
+
 // 텍스트 링크 스타일입니다.
 const TextP = styled.a`
   color: ${({ theme }) => theme.colors.grey600};
   font-size: ${({ theme }) => theme.fontSizes.fs18};
   font-weight: 400;
   text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.fs14};
+  }
 `;
 
 // 텍스트 전체를 감싸는 영역입니다.
@@ -152,9 +168,9 @@ const Quiz = () => {
           />
         </QuizCardWrapper>
         <TextWrapper>
-          <h2>
+          <Texth2>
             퀴즈와 출석체크를 <br /> 통해서 포인트를 얻어보세요
-          </h2>
+          </Texth2>
           <TextP>
             퀴즈를 풀고 출석 체크하면 포인트가 쌓여요!
             <br /> 건강도 챙기고 혜택도 받아보세요.

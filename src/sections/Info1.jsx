@@ -19,7 +19,7 @@ const Info1Wrapper = styled.div`
 
 const ContentGrad = styled.img`
   width: 100%;
-  height: 560px;
+  height: 561px;
   position: absolute;
   bottom: 0;
   z-index: 100;

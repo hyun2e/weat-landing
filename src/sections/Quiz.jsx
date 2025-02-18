@@ -19,7 +19,7 @@ const QuizWrapper = styled.div`
   width: 100%;
   height: 275px;
   gap: 30px;
-  padding: 40px 16px 20px 16px;
+  padding: 30px 16px 20px 16px;
   margin: auto;
   display: flex;
   flex-direction: row; /* 가로로 나열 */
@@ -38,6 +38,7 @@ const QuizWrapper = styled.div`
 const QuizCardWrapper = styled.div`
   width: 324px;
   height: 100%;
+  margin-top: 20px;
   position: relative;
   overflow: visible; /* 카드가 움직여도 잘 보이게 합니다 */
 `;

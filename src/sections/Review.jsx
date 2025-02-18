@@ -11,6 +11,9 @@ const ReviewContainer = styled.div`
   text-align: center;
   gap: 40px;
   position: relative;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+   gap: 30px;
+  }
 `;
 
 const ReviewTitle = styled.h2`

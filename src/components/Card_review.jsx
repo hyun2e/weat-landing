@@ -9,9 +9,6 @@ const CardTitle = styled.h2`
   font-weight: bold;
   margin-bottom: 40px;
   line-height: 1.5;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 22px;
-  }
 `;
 
 /* 카드 컨테이너 */

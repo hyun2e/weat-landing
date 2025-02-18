@@ -11,7 +11,7 @@ const DownloadWrapper = styled.div`
     padding: 0 16px 52px 16px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        padding: 0 38px 0 0;
+        padding: 0 16;
     };
 `
 // 다운로드 버튼 스타일
@@ -65,6 +65,7 @@ const DownloadTitle = styled.h2`
 const DownloadDescription = styled.p`
     color: ${({ theme }) => theme.colors.grey600};
     line-height: 1.5;
+    text-align: center;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         font-size: ${({ theme }) => theme.fontSizes.fs14};
@@ -79,7 +80,7 @@ const download = () => {
             위잇트와 함께해요!
             </DownloadTitle>
             <DownloadDescription>
-            건강한 한 끼가 더 쉬워지는 곳, 위잇트 새로운 건강식 경험을 만들어갈 여러분을 기다립니다.
+            건강한 한 끼가 더 쉬워지는 곳, 위잇트<br/> 새로운 건강식 경험을 만들어갈 여러분을 기다립니다.
             </DownloadDescription>
         </DownloadTextWrapper>
         <DownloadButtonWrapper>

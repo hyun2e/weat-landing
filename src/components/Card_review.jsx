@@ -2,15 +2,6 @@ import React from "react";
 import Chip from "../components/Chip";
 import styled from "styled-components";
 
-/* 카드 외부 타이틀 */
-const CardTitle = styled.h2`
-  text-align: center; /* ✅ 카드 바깥 타이틀 중앙 정렬 */
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  line-height: 1.5;
-`;
-
 /* 카드 컨테이너 */
 const CardContainer = styled.div`
   width: 276px;

@@ -10,6 +10,11 @@ const CategoryCard = styled.div`
   width: 80px;
   height:107px;
   gap: 6px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 60px;
+    height: 82px;
+  };
 `;
 
 // 카테고리 카트 이미지 스타일
@@ -27,7 +32,7 @@ const CategoryCardText = styled.p`
   line-height: 1.5;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: ${({ theme }) => theme.fontSizes.fs12};
+    font-size: ${({ theme }) => theme.fontSizes.fs11};
   }
 `;
 

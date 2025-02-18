@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   display: grid;
   border-bottom: 0.5px solid ${({ theme }) => theme.colors.grey200};
   grid-template-columns: 61px 1fr; /* 2개의 열로 가로로 나열 */
-  gap: 24px 6px; /* 상하 간격 24px, 좌우 간격 6px */
+  gap: 24px 10px; /* 상하 간격 24px, 좌우 간격 6px */
   justify-content: center; /* 가로로 가운데 정렬 */
   align-items: center; /* 세로로 위쪽 정렬 */
   text-align: left; /* 텍스트 왼쪽 정렬 */

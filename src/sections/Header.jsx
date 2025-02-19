@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
-const HeaderContainer = styled.header`
+const HeaderContainer = styled.nav`
   top: 0;
   width: 100%;
   height: 80px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,8 +67,8 @@ const MobileMenu = styled.div`
   position: absolute;
   top: 80px;
   right: 32px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border: 1px solid ${({ theme }) => theme.colors.grey250};
+  background-color: white;
+  border: 1px solid ${({ theme }) => theme.colors.grey100};
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
@@ -81,12 +82,12 @@ const MobileMenu = styled.div`
     padding: 12px 20px;
     color: ${({ theme }) => theme.colors.grey600};
     text-decoration: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.grey600};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.grey100};
     &:last-child {
       border-bottom: none;
     }
     &:hover {
-      background-color: ${({ theme }) => theme.colors.grey900};
+      background-color: ${({ theme }) => theme.colors.primary100};
     }
   }
 `;
@@ -99,19 +100,19 @@ const Header = () => {
         <img src="src/assets/images/logo_typo.svg" alt="위잇트 로고" />
       </Logo>
       <HeaderButtons>
-        <HeaderLink href="/about">위잇트 소개</HeaderLink>
-        <HeaderLink href="/community">커뮤니티</HeaderLink>
-        <HeaderLink href="/challenge">챌린지</HeaderLink>
-        <HeaderLink href="/download">다운로드</HeaderLink>
+        <HeaderLink href="#info">위잇트 소개</HeaderLink>
+        <HeaderLink href="#community">커뮤니티</HeaderLink>
+        <HeaderLink href="#challenge">챌린지</HeaderLink>
+        <HeaderLink href="#download">다운로드</HeaderLink>
       </HeaderButtons>
       <HamburgerButton onClick={toggleMenu}>
         <img src="src/assets/images/burger-menu.svg" alt="메뉴" />
       </HamburgerButton>
       <MobileMenu isOpen={menuOpen}>
-        <a href="/about">위잇트 소개</a>
-        <a href="/community">커뮤니티</a>
-        <a href="/challenge">챌린지</a>
-        <a href="/download">다운로드</a>
+        <a href="#info">위잇트 소개</a>
+        <a href="#community">커뮤니티</a>
+        <a href="#challenge">챌린지</a>
+        <a href="#download">다운로드</a>
       </MobileMenu>
     </HeaderContainer>
   );

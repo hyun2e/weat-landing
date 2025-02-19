@@ -129,8 +129,8 @@ const App = () => {
             <Quiz id="challenge" />
           </div>
           <Character />
-          <div id="download">
-            <Download id="download" />
+          <div>
+            <Download id="prototype" />
           </div>
           <Footer />
         </ContentWrapper>

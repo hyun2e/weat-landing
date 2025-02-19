@@ -130,12 +130,13 @@ const Header = () => {
         <HeaderLink onClick={() => scrollToSection("info")}>
           위잇트 소개
         </HeaderLink>
-        <HeaderLink href="#community">커뮤니티</HeaderLink>
-        <HeaderLink href="#challenge">챌린지</HeaderLink>
+        <HeaderLink onClick={() => scrollToSection("community")}>
+          커뮤니티
+        </HeaderLink>
+        <HeaderLink onClick={() => scrollToSection("challenge")}>챌린지</HeaderLink>
         <PrototypeLink
           href="https://www.figma.com/proto/KGhnsoGF1w1mUW4nu5tfq6/3%EC%A1%B0-%EC%9D%BC%EC%9D%B8%ED[…]2%BC%ED%94%84%EC%A0%9C?node-id=1300-32073&t=YjVPeU7bdef9oon9-1"
-          target="_blank"
-        >
+          target="_blank">
           체험하기
         </PrototypeLink>
       </HeaderButtons>
@@ -143,9 +144,9 @@ const Header = () => {
         <img src="src/assets/images/burger-menu.svg" alt="메뉴" />
       </HamburgerButton>
       <MobileMenu isOpen={menuOpen}>
-        <a href="#info">위잇트 소개</a>
-        <a href="#community">커뮤니티</a>
-        <a href="#challenge">챌린지</a>
+        <a onClick={() => scrollToSection("info")}>위잇트 소개</a>
+        <a onClick={() => scrollToSection("community")}>커뮤니티</a>
+        <a onClick={() => scrollToSection("challenge")}>챌린지</a>
         <a href="" target="_blank">
           체험하기
         </a>

@@ -9,7 +9,7 @@ import Button from "./Button";
 const SliderContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 500px;
+  /* height: 500px; */
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -20,7 +20,7 @@ const SliderContainer = styled.div`
 // 슬라이드들을 감싸는 래퍼 (가로로 나열)
 const SlideWrapper = styled.div`
   display: flex;
-  height: 500px;
+  /* height: 500px; */
   transition: transform 0.5s ease-in-out;
   transform: translateX(${(props) => props.translate}%);
 
@@ -34,12 +34,13 @@ const Slide = styled.div`
   min-width: 100%;
   background-image: url(${(props) => props.image});
   background-size: cover;
-  background-position: center;
+  background-position: ${(props) => (props.index === 3 ? "bottom" : "center")};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 180px;
+  padding-top: 200px;
+  padding-bottom: 400px;
   font-size: 32px;
   color: white;
   gap: 30px;
@@ -79,8 +80,8 @@ const ContentWrapper = styled.div`
   gap: 4px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-      flex-direction: column;
-    }
+    flex-direction: column;
+  }
 `;
 
 const HeroContent = styled.p`

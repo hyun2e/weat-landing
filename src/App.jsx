@@ -82,6 +82,7 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 150px;
+  max-width: 1920px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     gap: 64px;
@@ -89,7 +90,7 @@ const ContentWrapper = styled.div`
 `;
 
 const Section = styled.section`
-  height: 500px;
+  /* height: 500px; */
   background-color: ${({ $bgColor }) => $bgColor || "#ffffff"};
   display: flex;
   align-items: center;

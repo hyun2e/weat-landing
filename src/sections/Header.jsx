@@ -41,6 +41,7 @@ const HeaderButtons = styled.div`
     visibility: hidden;
   }
 `;
+
 const HeaderLink = styled.a`
   color: ${({ theme }) => theme.colors.grey600};
   font-family: ${({ theme }) => theme.fonts.main};
@@ -56,6 +57,23 @@ const HeaderLink = styled.a`
     font-weight: 600;
   }
 `;
+
+const PrototypeLink = styled.a`
+  color: ${({ theme }) => theme.colors.primary};
+  font-family: ${({ theme }) => theme.fonts.main};
+  font-size: ${({ theme }) => theme.fontSizes.fs18};
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  &:hover {
+    color: ${({ theme }) => theme.colors.grey900};
+  }
+  &:focus {
+    font-weight: 600;
+  }
+`;
+
 const HamburgerButton = styled.div`
   display: none;
   cursor: pointer;
@@ -114,7 +132,12 @@ const Header = () => {
         </HeaderLink>
         <HeaderLink href="#community">커뮤니티</HeaderLink>
         <HeaderLink href="#challenge">챌린지</HeaderLink>
-        <HeaderLink href="#download">다운로드</HeaderLink>
+        <PrototypeLink
+          href="https://www.figma.com/proto/KGhnsoGF1w1mUW4nu5tfq6/3%EC%A1%B0-%EC%9D%BC%EC%9D%B8%ED[…]2%BC%ED%94%84%EC%A0%9C?node-id=1300-32073&t=YjVPeU7bdef9oon9-1"
+          target="_blank"
+        >
+          체험하기
+        </PrototypeLink>
       </HeaderButtons>
       <HamburgerButton onClick={toggleMenu}>
         <img src="src/assets/images/burger-menu.svg" alt="메뉴" />
@@ -123,7 +146,9 @@ const Header = () => {
         <a href="#info">위잇트 소개</a>
         <a href="#community">커뮤니티</a>
         <a href="#challenge">챌린지</a>
-        <a href="#download">다운로드</a>
+        <a href="" target="_blank">
+          체험하기
+        </a>
       </MobileMenu>
     </HeaderContainer>
   );

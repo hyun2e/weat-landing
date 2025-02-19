@@ -101,7 +101,6 @@ const Section = styled.section`
 
   /* 반응형 스타일: 모바일 화면 (화면 폭 <= 768px)에서는 높이와 폰트 크기를 조정 */
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    height: 440px;
   }
 `;
 

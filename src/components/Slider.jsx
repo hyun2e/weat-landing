@@ -13,7 +13,6 @@ const SliderContainer = styled.div`
   overflow: hidden;
 
   @media (max-width: 768px) {
-    height: 440px; /* 모바일 화면 높이 조정 */
   }
 `;
 
@@ -25,7 +24,6 @@ const SlideWrapper = styled.div`
   transform: translateX(${(props) => props.translate}%);
 
   @media (max-width: 768px) {
-    height: 440px; /* 모바일 화면 높이 조정 */
   }
 `;
 
@@ -48,7 +46,8 @@ const Slide = styled.div`
   @media (max-width: 768px) {
     background-image: url(${(props) =>
       props.mobileimage}); /* 모바일용 이미지 */
-    height: 500px; /* 모바일 화면 높이 조정 */
+    padding-top: 100px;
+    padding-bottom: 200px;
   }
 `;
 

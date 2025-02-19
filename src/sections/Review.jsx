@@ -39,7 +39,9 @@ const CardListWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     gap: 24px;
     margin-left: 20px;
-    padding-bottom: 20px;
+    padding: 40px 0px;
+    /* padding-top: 40px;
+    padding-bottom: 40px; */
   }
 `;
 

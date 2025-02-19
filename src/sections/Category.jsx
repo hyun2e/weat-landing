@@ -30,6 +30,7 @@ const CategoryContents = styled.div`
   }
 `;
 const CategoryTextWrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,6 +83,22 @@ const Category = () => {
     { icon: "src/assets/images/category_event.svg", text: "EVENT" },
   ];
 
+  const MoBr = styled.span`
+    display: none;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        display: inline;
+    }
+`;
+
+const PCBr = styled.span`
+    display: inline;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        display: none;
+    }
+`;
+
   return (
     <CategoryContainer>
       <CategoryTextWrapper>
@@ -90,8 +107,11 @@ const Category = () => {
           식당을 탐색해보세요
         </CategoryTitle>
         <CategoryDescription>
-          다이어트, 비건, 고단백, 저당 등 다양한 카테고리를 탐색하여 <br />
-          나에게 딱 맞는 식당을 찾아 건강한 한 끼를 더 쉽게 만나보세요!
+          다이어트, 비건, 고단백, 저당 등 다양한
+          <MoBr><br/></MoBr> 카테고리를 탐색하여 
+          <PCBr><br /></PCBr>나에게 딱 맞는 식당을 찾아 
+          <MoBr><br/></MoBr> 
+          건강한 한 끼를 더 쉽게 만나보세요!
         </CategoryDescription>
       </CategoryTextWrapper>
       <CategoryContents>

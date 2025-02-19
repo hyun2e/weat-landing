@@ -94,13 +94,24 @@ const MobileMenu = styled.div`
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+  // 예시: 스크롤하여 섹션을 중앙에 배치하는 함수
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
   return (
     <HeaderContainer>
       <Logo>
         <img src="src/assets/images/logo_typo.svg" alt="위잇트 로고" />
       </Logo>
       <HeaderButtons>
-        <HeaderLink href="#info">위잇트 소개</HeaderLink>
+        <HeaderLink onClick={() => scrollToSection("info")}>
+          위잇트 소개
+        </HeaderLink>
         <HeaderLink href="#community">커뮤니티</HeaderLink>
         <HeaderLink href="#challenge">챌린지</HeaderLink>
         <HeaderLink href="#download">다운로드</HeaderLink>

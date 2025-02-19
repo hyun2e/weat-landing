@@ -112,18 +112,26 @@ const App = () => {
         <Header />
         <ContentWrapper>
           <div>
-            <Section >
+            <Section>
               <Slider slides={slides} auto={true} duration={10} />
             </Section>
             <Info1 />
           </div>
-          <Info2 id="info"/>
+          <div id="info">
+            <Info2 id="info" />
+          </div>
           <Onboarding />
           <Category />
-          <Review id="community" />
-          <Quiz id="challenge" />
+          <div id="community">
+            <Review id="community" />
+          </div>
+          <div id="challenge">
+            <Quiz id="challenge" />
+          </div>
           <Character />
-          <Download id="download" />
+          <div id="download">
+            <Download id="download" />
+          </div>
           <Footer />
         </ContentWrapper>
       </>

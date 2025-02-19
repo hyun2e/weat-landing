@@ -52,6 +52,12 @@ const NavLink = styled.a`
 `;
 
 const NavBar = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
   return (
     // Nav에 flex를 주니까 자식 요소인 Logo와 NavButton이 가로 정렬 됩니다.
     <Nav>

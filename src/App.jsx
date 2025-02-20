@@ -61,7 +61,7 @@ const slides = [
     title1: "퀴즈도 풀고, ",
     title2: "건강식 정보도 얻고 ",
     content1: "퀴즈에서 얻은 포인트로 ",
-    content1: "귀여운 캐릭터 지금 만나러 가보실까요? ",
+    content2: "귀여운 캐릭터 지금 만나러 가보실까요? ",
     button: {
       type: "hero-btn3",
     },

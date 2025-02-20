@@ -18,50 +18,48 @@ const OuterContainer = styled.div`
 
 /* 
   scrollLeft 함수: 왼쪽으로 움직이는 애니메이션을 만듭니다.
-  initialOffset: 시작 위치, singleWidth: 한 개 아이템의 너비
+  $initialOffset: 시작 위치, $singleWidth: 한 개 아이템의 너비
 */
-const scrollLeft = (initialOffset, singleWidth) => keyframes`
+const scrollLeft = ($initialOffset, $singleWidth) => keyframes`
   from {
-    transform: translateX(${initialOffset}px);
+    transform: translateX(${$initialOffset}px);
   }
   to {
-    transform: translateX(${initialOffset - singleWidth}px);
+    transform: translateX(${$initialOffset - $singleWidth}px);
   }
 `;
 
 /* 
   scrollRight 함수: 오른쪽으로 움직이는 애니메이션을 만듭니다.
-  initialOffset: 시작 위치, singleWidth: 한 개 아이템의 너비
+  $initialOffset: 시작 위치, $singleWidth: 한 개 아이템의 너비
 */
-const scrollRight = (initialOffset, singleWidth) => keyframes`
+const scrollRight = ($initialOffset, $singleWidth) => keyframes`
   from {
-    transform: translateX(${initialOffset}px);
+    transform: translateX(${$initialOffset}px);
   }
   to {
-    transform: translateX(${initialOffset + singleWidth}px);
+    transform: translateX(${$initialOffset + $singleWidth}px);
   }
 `;
 
 /* 
   ScrollingContainer 컴포넌트: 아이템들이 나란히 배열되어 움직이는 영역입니다.
   gap: 아이템들 사이의 간격을 만듭니다.
-  애니메이션 설정은 props(속성)를 통해 정해집니다.
+  아래에서 사용되는 커스텀 prop들은 transient prop($ 접두사)을 사용하여 DOM으로 전달되지 않습니다.
 */
 const ScrollingContainer = styled.div`
   display: flex; /* 아이템들을 가로로 배열합니다 */
   gap: 12px; /* 아이템들 사이에 12px 간격 */
   will-change: transform; /* 애니메이션을 위해 준비합니다 */
-  ${({ singleWidth, duration, direction, initialOffset }) =>
-    singleWidth &&
-    duration &&
+  ${({ $singleWidth, $duration, $direction, $initialOffset }) =>
+    $singleWidth &&
+    $duration &&
     css`
-      /* direction(방향)이 left이면 왼쪽으로, 아니면 오른쪽으로 애니메이션 실행 */
-      animation: ${direction === "left"
-          ? scrollLeft(initialOffset, singleWidth)
-          : scrollRight(initialOffset, singleWidth)}
-        ${duration}s linear infinite;
-      /* 초기 위치 설정 */
-      transform: translateX(${initialOffset}px);
+      animation: ${$direction === "left"
+          ? scrollLeft($initialOffset, $singleWidth)
+          : scrollRight($initialOffset, $singleWidth)}
+        ${$duration}s linear infinite;
+      transform: translateX(${$initialOffset}px);
     `}
 `;
 
@@ -121,10 +119,10 @@ const InfiniteScrollWrapper = ({
     <OuterContainer>
       <ScrollingContainer
         ref={containerRef}
-        singleWidth={singleWidth}
-        duration={duration}
-        direction={direction}
-        initialOffset={initialOffset}
+        $singleWidth={singleWidth}
+        $duration={duration}
+        $direction={direction}
+        $initialOffset={initialOffset}
         // direction이 "left"일 때, 애니메이션 한 사이클이 끝나면 handleAnimationIteration 실행
         onAnimationIteration={
           direction === "left" ? handleAnimationIteration : undefined

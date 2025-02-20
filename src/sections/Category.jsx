@@ -67,6 +67,22 @@ const CategoryCardWrapper = styled.div`
   }
 `;
 
+const MoBr = styled.span`
+  display: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: inline;
+  }
+`;
+
+const PCBr = styled.span`
+  display: inline;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
+`;
+
 const Category = () => {
   const categoryDataTop = [
     { icon: "src/assets/images/category_diet.svg", text: "다이어트" },
@@ -83,22 +99,6 @@ const Category = () => {
     { icon: "src/assets/images/category_event.svg", text: "EVENT" },
   ];
 
-  const MoBr = styled.span`
-    display: none;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        display: inline;
-    }
-`;
-
-const PCBr = styled.span`
-    display: inline;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        display: none;
-    }
-`;
-
   return (
     <CategoryContainer>
       <CategoryTextWrapper>
@@ -108,21 +108,29 @@ const PCBr = styled.span`
         </CategoryTitle>
         <CategoryDescription>
           다이어트, 비건, 고단백, 저당 등 다양한
-          <MoBr><br/></MoBr> 카테고리를 탐색하여 
-          <PCBr><br /></PCBr>나에게 딱 맞는 식당을 찾아 
-          <MoBr><br/></MoBr> 
+          <MoBr>
+            <br />
+          </MoBr>
+          카테고리를 탐색하여{" "}
+          <PCBr>
+            <br />
+          </PCBr>
+          나에게 딱 맞는 식당을 찾아{" "}
+          <MoBr>
+            <br />
+          </MoBr>
           건강한 한 끼를 더 쉽게 만나보세요!
         </CategoryDescription>
       </CategoryTextWrapper>
       <CategoryContents>
         <CategoryCardWrapper>
           {categoryDataTop.map((item, index) => (
-            <Card_category icon={item.icon} text={item.text} key={index} />
+            <Card_category key={index} $icon={item.icon} $text={item.text} />
           ))}
         </CategoryCardWrapper>
         <CategoryCardWrapper>
           {categoryDataBottom.map((item, index) => (
-            <Card_category icon={item.icon} text={item.text} key={index} />
+            <Card_category key={index} $icon={item.icon} $text={item.text} />
           ))}
         </CategoryCardWrapper>
       </CategoryContents>

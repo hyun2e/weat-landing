@@ -34,7 +34,6 @@ const QuizWrapper = styled.div`
 `;
 
 // 카드들을 담는 영역입니다.
-// position: relative; 를 사용하여 내부 카드들의 위치를 조절합니다.
 const QuizCardWrapper = styled.div`
   width: 324px;
   height: 100%;
@@ -88,8 +87,8 @@ const CardLeft = styled.img`
   position: absolute;
   left: 50%; /* 부모의 중앙 */
   top: 0;
-  transform: ${(props) =>
-    props.animate
+  transform: ${({ $animate }) =>
+    $animate
       ? "translateX(calc(-50% - 100px)) rotate(-15deg)" // unfold 상태: 왼쪽으로 100px 이동 후 회전
       : "translateX(-50%) rotate(0deg)"}; // 기본 상태: 중앙에 위치
   transition: transform 0.5s ease; /* 0.5초 동안 부드럽게 변화 */
@@ -97,7 +96,10 @@ const CardLeft = styled.img`
 `;
 
 // 중앙 카드는 unfold 상태와 관계없이 중앙에 고정됩니다.
-const CardCenter = styled.img`
+// $animate prop은 사용하지 않더라도 전달되지 않도록 합니다.
+const CardCenter = styled.img.withConfig({
+  shouldForwardProp: (prop) => prop !== "$animate",
+})`
   position: absolute;
   left: 50%; /* 부모의 중앙 */
   top: 0;
@@ -111,8 +113,8 @@ const CardRight = styled.img`
   position: absolute;
   left: 50%; /* 부모의 중앙 */
   top: 0;
-  transform: ${(props) =>
-    props.animate
+  transform: ${({ $animate }) =>
+    $animate
       ? "translateX(calc(-50% + 100px)) rotate(15deg)" // unfold 상태: 오른쪽으로 100px 이동 후 회전
       : "translateX(-50%) rotate(0deg)"}; // 기본 상태: 중앙에 위치
   transition: transform 0.5s ease;
@@ -156,17 +158,17 @@ const Quiz = () => {
           <CardLeft
             src="src/assets/images/quizcard_1.svg"
             alt="spelling"
-            animate={inView}
+            $animate={inView}
           />
           <CardCenter
             src="src/assets/images/quizcard_3.svg"
             alt="OX"
-            animate={inView}
+            $animate={inView}
           />
           <CardRight
             src="src/assets/images/quizcard_2.svg"
             alt="picture"
-            animate={inView}
+            $animate={inView}
           />
         </QuizCardWrapper>
         <TextWrapper>

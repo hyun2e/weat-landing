@@ -81,7 +81,10 @@ const HamburgerButton = styled.div`
     display: block;
   }
 `;
-const MobileMenu = styled.div`
+
+const MobileMenu = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== "isopen",
+})`
   position: absolute;
   top: 80px;
   right: 32px;
@@ -89,7 +92,7 @@ const MobileMenu = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.grey100};
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+  display: ${({ isopen }) => (isopen === "open" ? "block" : "none")};
   z-index: 999;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     top: 70px;
@@ -109,9 +112,11 @@ const MobileMenu = styled.div`
     }
   }
 `;
+
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const [menuOpen, setMenuOpen] = useState("close");
+  const toggleMenu = () =>
+    setMenuOpen((prev) => (prev === "close" ? "open" : "close"));
 
   // 예시: 스크롤하여 섹션을 중앙에 배치하는 함수
   const scrollToSection = (id) => {
@@ -133,17 +138,20 @@ const Header = () => {
         <HeaderLink onClick={() => scrollToSection("community")}>
           커뮤니티
         </HeaderLink>
-        <HeaderLink onClick={() => scrollToSection("challenge")}>챌린지</HeaderLink>
+        <HeaderLink onClick={() => scrollToSection("challenge")}>
+          챌린지
+        </HeaderLink>
         <PrototypeLink
           href="https://www.figma.com/proto/KGhnsoGF1w1mUW4nu5tfq6/3%EC%A1%B0-%EC%9D%BC%EC%9D%B8%ED[…]2%BC%ED%94%84%EC%A0%9C?node-id=1300-32073&t=YjVPeU7bdef9oon9-1"
-          target="_blank">
+          target="_blank"
+        >
           체험하기
         </PrototypeLink>
       </HeaderButtons>
       <HamburgerButton onClick={toggleMenu}>
         <img src="src/assets/images/burger-menu.svg" alt="메뉴" />
       </HamburgerButton>
-      <MobileMenu isOpen={menuOpen}>
+      <MobileMenu isopen={menuOpen}>
         <a onClick={() => scrollToSection("info")}>위잇트 소개</a>
         <a onClick={() => scrollToSection("community")}>커뮤니티</a>
         <a onClick={() => scrollToSection("challenge")}>챌린지</a>

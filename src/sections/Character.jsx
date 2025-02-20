@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Button from '../components/Button';
-import Card_character from '../components/Card_character';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import Button from "../components/Button";
+import Card_character from "../components/Card_character";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -46,14 +46,11 @@ const CharacterWrapper = styled.div`
   img:hover {
     transform: scale(1.1); /* 호버 시 이미지 크기 확대 */
   }
-  
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     gap: 0px; /* 이미지 간의 간격 */
   }
-
 `;
-
-
 
 const Texth2 = styled.a`
   color: ${({ theme }) => theme.colors.grey900};
@@ -122,68 +119,74 @@ const Character = () => {
   return (
     <Wrapper>
       <TextWrapper>
-        <Texth2>포인트를 모아서 <br />4종 랜덤 위펫을 만나보세요!</Texth2>
-        <TextP>포인트를 모으면 화분에서 꽃이 자라고,랜덤 위펫 등장해요! <br />🌱🍅🥕🥦 어떤 친구가 나올지 기대해 보세요!</TextP>
+        <Texth2>
+          포인트를 모아서 <br />
+          4종 랜덤 위펫을 만나보세요!
+        </Texth2>
+        <TextP>
+          포인트를 모으면 화분에서 꽃이 자라고,랜덤 위펫 등장해요! <br />
+          🌱🍅🥕🥦 어떤 친구가 나올지 기대해 보세요!
+        </TextP>
       </TextWrapper>
 
       <CardWrapper>
         <Card_character
-          plant="src/assets/images/Flower_Level1.svg"
+          plant="/assets/images/Flower_Level1.svg"
           text1="Lv.1"
           icons={[
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart grey.svg",
-            "src/assets/images/icon_Heart grey.svg",
-            "src/assets/images/icon_Heart grey.svg",
-            "src/assets/images/icon_Heart grey.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart grey.svg",
+            "/assets/images/icon_Heart grey.svg",
+            "/assets/images/icon_Heart grey.svg",
+            "/assets/images/icon_Heart grey.svg",
           ]}
           text2="작은 씨앗에서 새로운 생명의 시작을 느껴보세요!"
         />
         <Card_character
-          plant="src/assets/images/Flower_Level2.svg"
+          plant="/assets/images/Flower_Level2.svg"
           text1="Lv.2"
           icons={[
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart grey.svg",
-            "src/assets/images/icon_Heart grey.svg",
-            "src/assets/images/icon_Heart grey.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart grey.svg",
+            "/assets/images/icon_Heart grey.svg",
+            "/assets/images/icon_Heart grey.svg",
           ]}
           text2="첫 싹이 틀 때, 당신의 식물도 함께 자라기 시작합니다!"
         />
         <Card_character
-          plant="src/assets/images/Flower_Level3.svg"
+          plant="/assets/images/Flower_Level3.svg"
           text1="Lv.3"
           icons={[
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart grey.svg",
-            "src/assets/images/icon_Heart grey.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart grey.svg",
+            "/assets/images/icon_Heart grey.svg",
           ]}
           text2="싹에서 꽃 봉우리가 싹트기 시작했습니다!"
         />
         <Card_character
-          plant="src/assets/images/Flower_Level4.svg"
+          plant="/assets/images/Flower_Level4.svg"
           text1="Lv.4"
           icons={[
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart grey.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart grey.svg",
           ]}
           text2="아름다운 꽃이 만개할 순간이 가까워졌습니다!"
         />
         <Card_character
-          plant="src/assets/images/Flower_riddle.svg"
+          plant="/assets/images/Flower_riddle.svg"
           text1="Lv.5"
           icons={[
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart.svg",
-            "src/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
+            "/assets/images/icon_Heart.svg",
           ]}
           text2="아름다운 꽃이 어떤 열매를 맺었을까요?"
         />
@@ -191,32 +194,48 @@ const Character = () => {
 
       <BottomWrapper>
         <Texth3>여러분을 기다리는 위펫은 어떤 모습일까요?</Texth3>
-        <img src="src/assets/images/CursorClick.svg" alt="CursorClick" />
+        <img src="/assets/images/CursorClick.svg" alt="CursorClick" />
       </BottomWrapper>
 
       <CharacterWrapper>
         <img
-          src={hoveredImage === 'catrot' ? 'src/assets/images/catrot_active.svg' : 'src/assets/images/catrot_inactive.svg'}
+          src={
+            hoveredImage === "catrot"
+              ? "/assets/images/catrot_active.svg"
+              : "/assets/images/catrot_inactive.svg"
+          }
           alt="catrot"
-          onMouseEnter={() => handleMouseEnter('catrot')} // 호버 시 이미지 변경
+          onMouseEnter={() => handleMouseEnter("catrot")} // 호버 시 이미지 변경
           onMouseLeave={handleMouseLeave} // 호버 벗어날 때 원래 이미지로 변경
         />
         <img
-          src={hoveredImage === 'gomato' ? 'src/assets/images/gomato_active.svg' : 'src/assets/images/gomato_inactive.svg'}
+          src={
+            hoveredImage === "gomato"
+              ? "/assets/images/gomato_active.svg"
+              : "/assets/images/gomato_inactive.svg"
+          }
           alt="gomato"
-          onMouseEnter={() => handleMouseEnter('gomato')}
+          onMouseEnter={() => handleMouseEnter("gomato")}
           onMouseLeave={handleMouseLeave}
         />
         <img
-          src={hoveredImage === 'buldocoli' ? 'src/assets/images/buldocoli_active.svg' : 'src/assets/images/buldocoli_inactive.svg'}
+          src={
+            hoveredImage === "buldocoli"
+              ? "/assets/images/buldocoli_active.svg"
+              : "/assets/images/buldocoli_inactive.svg"
+          }
           alt="buldocoli"
-          onMouseEnter={() => handleMouseEnter('buldocoli')}
+          onMouseEnter={() => handleMouseEnter("buldocoli")}
           onMouseLeave={handleMouseLeave}
         />
         <img
-          src={hoveredImage === 'radigi' ? 'src/assets/images/radigi_active.svg' : 'src/assets/images/radigi_inactive.svg'}
+          src={
+            hoveredImage === "radigi"
+              ? "/assets/images/radigi_active.svg"
+              : "/assets/images/radigi_inactive.svg"
+          }
           alt="radigi"
-          onMouseEnter={() => handleMouseEnter('radigi')}
+          onMouseEnter={() => handleMouseEnter("radigi")}
           onMouseLeave={handleMouseLeave}
         />
       </CharacterWrapper>

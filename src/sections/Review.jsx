@@ -68,12 +68,12 @@ function Review() {
       title: "퍼맨츠 가지요리 너무 존맛",
       content:
         "채식주의 식단을 하고 있지는 않지만, 비건이 아닌 음식들과 비교해도 맛있어요! 친구와 신년모임으로 오랜만에 만났는데 요즘 소화가 잘 안됐는데 ···",
-      likeIcon: "src/assets/images/Heart_gray_little.svg",
+      likeIcon: "/assets/images/Heart_gray_little.svg",
       likeCount: 36,
-      ChatIcon: "src/assets/images/ChatCircleDots.svg",
+      ChatIcon: "/assets/images/ChatCircleDots.svg",
       ChatCount: 11,
-      BookMarkIcon: "src/assets/images/BookmarkSimple.svg",
-      image: "src/assets/images/review1.png",
+      BookMarkIcon: "/assets/images/BookmarkSimple.svg",
+      image: "/assets/images/review1.png",
     },
     {
       chip: "저탄고지",
@@ -82,12 +82,12 @@ function Review() {
       title: "요거트 볼 맛집 플러디 강추",
       content:
         "요거트는 담백하고 건강한 맛이라 자주 찾는 편인데, 여기 요거트는 진짜 최고였어요! 🥄 처음 한입 먹자마자 부드러움과 은은한 단맛이 퍼지는 게 ···",
-      likeIcon: "src/assets/images/Heart_gray_little.svg",
+      likeIcon: "/assets/images/Heart_gray_little.svg",
       likeCount: 0,
-      ChatIcon: "src/assets/images/ChatCircleDots.svg",
+      ChatIcon: "/assets/images/ChatCircleDots.svg",
       ChatCount: 18,
-      BookMarkIcon: "src/assets/images/BookmarkSimple.svg",
-      image: "src/assets/images/review2.png",
+      BookMarkIcon: "/assets/images/BookmarkSimple.svg",
+      image: "/assets/images/review2.png",
     },
     {
       chip: "저속노화",
@@ -96,12 +96,12 @@ function Review() {
       title: "포케맛집 ㅇㅈ",
       content:
         "요즘 속이 좀 예민해서 가벼운 음식이 땡겼는데, 포케가 딱이었어요! 신선한 재료들이 가득해서 한입 한입 먹을 때마다 상쾌한 느낌",
-      likeIcon: "src/assets/images/Heart_gray_little.svg",
+      likeIcon: "/assets/images/Heart_gray_little.svg",
       likeCount: 9,
-      ChatIcon: "src/assets/images/ChatCircleDots.svg",
+      ChatIcon: "/assets/images/ChatCircleDots.svg",
       ChatCount: 11,
-      BookMarkIcon: "src/assets/images/BookmarkSimple.svg",
-      image: "src/assets/images/review3.png",
+      BookMarkIcon: "/assets/images/BookmarkSimple.svg",
+      image: "/assets/images/review3.png",
     },
     {
       chip: "고단백",
@@ -110,12 +110,12 @@ function Review() {
       title: "마파 두부 알싸한 맛",
       content:
         "평소 마파두부를 좋아하는 편이라 기대하면서 방문했는데, 기대 이상이었어요! 비건은 아니지만, 가끔 두부 요리를 찾곤 하는데, 여기 마파두부는 ···",
-      likeIcon: "src/assets/images/Heart_gray_little.svg",
+      likeIcon: "/assets/images/Heart_gray_little.svg",
       likeCount: 21,
-      ChatIcon: "src/assets/images/ChatCircleDots.svg",
+      ChatIcon: "/assets/images/ChatCircleDots.svg",
       ChatCount: 11,
-      BookMarkIcon: "src/assets/images/BookmarkSimple.svg",
-      image: "src/assets/images/review4.png",
+      BookMarkIcon: "/assets/images/BookmarkSimple.svg",
+      image: "/assets/images/review4.png",
     },
   ];
 

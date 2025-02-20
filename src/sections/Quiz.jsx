@@ -156,17 +156,17 @@ const Quiz = () => {
         <QuizCardWrapper ref={cardRef}>
           {/* inView 상태(true/false)를 각 카드에 전달하여 애니메이션을 조절합니다. */}
           <CardLeft
-            src="src/assets/images/quizcard_1.svg"
+            src="/assets/images/quizcard_1.svg"
             alt="spelling"
             $animate={inView}
           />
           <CardCenter
-            src="src/assets/images/quizcard_3.svg"
+            src="/assets/images/quizcard_3.svg"
             alt="OX"
             $animate={inView}
           />
           <CardRight
-            src="src/assets/images/quizcard_2.svg"
+            src="/assets/images/quizcard_2.svg"
             alt="picture"
             $animate={inView}
           />

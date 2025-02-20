@@ -1,8 +1,8 @@
 // src/components/Slider.jsx
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import LeftArrowImg from "../assets/images/hero_left_arrow.png";
-import RightArrowImg from "../assets/images/hero_right_arrow.png";
+import LeftArrowImg from "/assets/images/hero_left_arrow.png";
+import RightArrowImg from "/assets/images/hero_right_arrow.png";
 import Button from "./Button";
 
 // 슬라이더 전체 컨테이너

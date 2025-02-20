@@ -85,18 +85,18 @@ const PCBr = styled.span`
 
 const Category = () => {
   const categoryDataTop = [
-    { icon: "src/assets/images/category_diet.svg", text: "다이어트" },
-    { icon: "src/assets/images/category_meat.svg", text: "저탄고지" },
-    { icon: "src/assets/images/category_vegan.svg", text: "비건·채식" },
-    { icon: "src/assets/images/category_protein.svg", text: "고단백" },
-    { icon: "src/assets/images/category_glutenfree.svg", text: "글루텐프리" },
+    { icon: "/assets/images/category_diet.svg", text: "다이어트" },
+    { icon: "/assets/images/category_meat.svg", text: "저탄고지" },
+    { icon: "/assets/images/category_vegan.svg", text: "비건·채식" },
+    { icon: "/assets/images/category_protein.svg", text: "고단백" },
+    { icon: "/assets/images/category_glutenfree.svg", text: "글루텐프리" },
   ];
   const categoryDataBottom = [
-    { icon: "src/assets/images/category_zerosugar.svg", text: "저당·제로슈가" },
-    { icon: "src/assets/images/category_detox.svg", text: "디톡스" },
-    { icon: "src/assets/images/category_slowaging.svg", text: "저속노화" },
-    { icon: "src/assets/images/category_less.svg", text: "저염식" },
-    { icon: "src/assets/images/category_event.svg", text: "EVENT" },
+    { icon: "/assets/images/category_zerosugar.svg", text: "저당·제로슈가" },
+    { icon: "/assets/images/category_detox.svg", text: "디톡스" },
+    { icon: "/assets/images/category_slowaging.svg", text: "저속노화" },
+    { icon: "/assets/images/category_less.svg", text: "저염식" },
+    { icon: "/assets/images/category_event.svg", text: "EVENT" },
   ];
 
   return (

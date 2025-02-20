@@ -130,19 +130,19 @@ const Footer = () => {
         <FooterIconWrapper>
           <FooterIconButton href="https://www.youtube.com" target="_blank">
             <FooterIconimg
-              src="src/assets/images/icon_youtube.svg"
+              src="/assets/images/icon_youtube.svg"
               alt="YouTube"
             />
           </FooterIconButton>
           <FooterIconButton href="https://www.instagram.com" target="_blank">
             <FooterIconimg
-              src="src/assets/images/icon_insta.svg"
+              src="/assets/images/icon_insta.svg"
               alt="Instagram"
             />
           </FooterIconButton>
           <FooterIconButton>
             <FooterIconimg
-              src="src/assets/images/icon_airplane.svg"
+              src="/assets/images/icon_airplane.svg"
               alt="Message"
             />
           </FooterIconButton>

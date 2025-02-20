@@ -64,23 +64,23 @@ const ImageOP = styled.img`
   text-align: center;
 
   /* 데스크탑 화면에서 기본 이미지 */
-  src: url("ssrc/assets/images/section2_domino.svg");
+  src: url("/assets/images/section2_domino.svg");
 
   /* 모바일 화면에서 다른 이미지 */
   @media (max-width: 768px) {
     width: 100%; /* 크기 줄이기, 원하는 비율로 조정 */
-    height: auto; /* 비율 유지 */;
-    src: url("src/assets/images/mo_section2_domino.svg");
+    height: auto; /* 비율 유지 */
+    src: url("/assets/images/mo_section2_domino.svg");
   }
 `;
 
 const Info1 = () => {
   return (
     <Info1Wrapper>
-      <ContentGrad src="src/assets/images/pc_section2 bg.png" />
+      <ContentGrad src="/assets/images/pc_section2 bg.png" />
       <div>
         <HeaderWrapper>
-          <Image src="src/assets/images/icon_question.svg" alt="image1" />
+          <Image src="/assets/images/icon_question.svg" alt="image1" />
           <Texth2>
             다양한 건강식 메뉴를
             <br />
@@ -88,10 +88,7 @@ const Info1 = () => {
           </Texth2>
         </HeaderWrapper>
 
-        <ImageOP
-          src="src/assets/images/section2_domino.svg"
-          alt="second-image"
-        />
+        <ImageOP src="/assets/images/section2_domino.svg" alt="second-image" />
       </div>
     </Info1Wrapper>
   );

@@ -129,7 +129,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Logo>
-        <img src="src/assets/images/logo_typo.svg" alt="위잇트 로고" />
+        <img src="/assets/images/logo_typo.svg" alt="위잇트 로고" />
       </Logo>
       <HeaderButtons>
         <HeaderLink onClick={() => scrollToSection("info")}>
@@ -149,7 +149,7 @@ const Header = () => {
         </PrototypeLink>
       </HeaderButtons>
       <HamburgerButton onClick={toggleMenu}>
-        <img src="src/assets/images/burger-menu.svg" alt="메뉴" />
+        <img src="/assets/images/burger-menu.svg" alt="메뉴" />
       </HamburgerButton>
       <MobileMenu isopen={menuOpen}>
         <a onClick={() => scrollToSection("info")}>위잇트 소개</a>

@@ -96,13 +96,13 @@ const download = () => {
       <DownloadButtonWrapper>
         <DownloadButton onClick={() => window.alert("준비중입니다.")}>
           <DownloadButtonImage
-            src="src/assets/images/PC_google play.png"
+            src="/assets/images/PC_google play.png"
             alt="구글 플레이 스토어"
           />
         </DownloadButton>
         <DownloadButton onClick={() => window.alert("준비중입니다.")}>
           <DownloadButtonImage
-            src="src/assets/images/PC_app store.png"
+            src="/assets/images/PC_app store.png"
             alt="앱 스토어"
           />
         </DownloadButton>

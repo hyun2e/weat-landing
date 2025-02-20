@@ -22,8 +22,8 @@ import Slider from "./components/Slider";
 const slides = [
   {
     id: 1,
-    src: "src/assets/images/PC_hero_1.png",
-    mobileImage: "src/assets/images/MO_hero_1.png",
+    src: "/assets/images/PC_hero_1.png",
+    mobileImage: "/assets/images/MO_hero_1.png",
     title1: "건강식을 찾고 있다면 ",
     title2: "위잇트에서 찾아보세요!",
     content1: "당신만을 위한 ",
@@ -35,8 +35,8 @@ const slides = [
   },
   {
     id: 2,
-    src: "src/assets/images/PC_hero_2.png",
-    mobileImage: "src/assets/images/MO_hero_2.png",
+    src: "/assets/images/PC_hero_2.png",
+    mobileImage: "/assets/images/MO_hero_2.png",
     title1: "샐러드만 건강식이라는 ",
     title2: "생각은 NO! ",
     content1: "위잇트에서 다양하고 맛있는 ",
@@ -47,8 +47,8 @@ const slides = [
   },
   {
     id: 3,
-    src: "src/assets/images/PC_hero_3.png",
-    mobileImage: "src/assets/images/MO_hero_3.png",
+    src: "/assets/images/PC_hero_3.png",
+    mobileImage: "/assets/images/MO_hero_3.png",
     title1: "지도로 한눈에 ",
     title2: "보기 쉬운 맛집탐방 ",
     content1: "당신만을 위한 ",
@@ -56,8 +56,8 @@ const slides = [
   },
   {
     id: 4,
-    src: "src/assets/images/PC_hero_4.png",
-    mobileImage: "src/assets/images/MO_hero_4.png",
+    src: "/assets/images/PC_hero_4.png",
+    mobileImage: "/assets/images/MO_hero_4.png",
     title1: "퀴즈도 풀고, ",
     title2: "건강식 정보도 얻고 ",
     content1: "퀴즈에서 얻은 포인트로 ",
@@ -68,8 +68,8 @@ const slides = [
   },
   {
     id: 5,
-    src: "src/assets/images/PC_hero_5.png",
-    mobileImage: "src/assets/images/MO_hero_5.png",
+    src: "/assets/images/PC_hero_5.png",
+    mobileImage: "/assets/images/MO_hero_5.png",
     title1: "위잇트에서 더 많은 ",
     title2: "이야기를 나눠보세요 ",
     content1: "식당 리뷰와 건강식 레시피를 ",

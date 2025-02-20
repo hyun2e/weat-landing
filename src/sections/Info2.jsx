@@ -15,7 +15,7 @@ const Info2Container = styled.div`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     gap: 24px;
   }
@@ -43,34 +43,34 @@ const Info2DataContainer = styled.div`
 const Info2 = () => {
   const info2DataTop = [
     {
-      icon: "src/assets/images/icon_1.svg",
+      icon: "/assets/images/icon_1.svg",
       text: "좋아하는 음식을 \n 설정하면 추천해줘요",
     },
     {
-      icon: "src/assets/images/icon_2.svg",
+      icon: "/assets/images/icon_2.svg",
       text: "알러지와 기피하고 싶은 \n 음식도 반영해줘요",
     },
     {
-      icon: "src/assets/images/icon_3.svg",
+      icon: "/assets/images/icon_3.svg",
       text: "건강 목표를 설정하고 \n 목표에 맞춘 식당을 보여줘요",
     },
   ];
 
   const info2DataBottom = [
     {
-      icon: "src/assets/images/icon_4.svg",
+      icon: "/assets/images/icon_4.svg",
       text: "퀴즈와 출석체크를 \n 통해 포인트를 모아보세요",
     },
     {
-      icon: "src/assets/images/icon_5.svg",
+      icon: "/assets/images/icon_5.svg",
       text: "건강식 키워드로 \n 탐색할 수 있어요",
     },
     {
-      icon: "src/assets/images/icon_6.svg",
+      icon: "/assets/images/icon_6.svg",
       text: "신뢰도 높은 리뷰를 \n 확인할 수 있어요",
     },
     {
-      icon: "src/assets/images/icon_7.svg",
+      icon: "/assets/images/icon_7.svg",
       text: "귀여운 캐릭터를 \n 키울 수 있어요",
     },
   ];

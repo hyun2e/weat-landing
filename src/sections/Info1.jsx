@@ -88,7 +88,7 @@ const Info1 = () => {
           </Texth2>
         </HeaderWrapper>
 
-        <ImageOP src="/assets/images/section2_domino.svg" alt="second-image" />
+        <ImageOP src="/assets/images/pc_section2_domino.svg" alt="second-image" />
       </div>
     </Info1Wrapper>
   );

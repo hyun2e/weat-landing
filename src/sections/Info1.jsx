@@ -64,7 +64,7 @@ const ImageOP = styled.img`
   text-align: center;
 
   /* 데스크탑 화면에서 기본 이미지 */
-  src: url("/assets/images/section2_domino.svg");
+  src: url("/assets/images/pc_section2_domino.svg");
 
   /* 모바일 화면에서 다른 이미지 */
   @media (max-width: 768px) {

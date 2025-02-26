@@ -240,7 +240,7 @@ const Character = () => {
         />
       </CharacterWrapper>
 
-      <Button type="outline-btn" href="/characters">
+      <Button type="outline-btn" href="https://www.figma.com/proto/NrEuIFexqypyInjjmqg408/3%EC%A1%B0?node-id=2481-5032&t=iBmMUsWcc8APvLs8-1" target = "_blank">
         위펫 만나러가기
       </Button>
     </Wrapper>

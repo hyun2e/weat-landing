@@ -141,7 +141,7 @@ function Review() {
       </CardSlideWrapper>
 
       {/* 리뷰 더 보기 버튼 */}
-      <Button type="outline-btn" href="/characters">
+      <Button type="outline-btn" href="https://www.figma.com/proto/NrEuIFexqypyInjjmqg408/3%EC%A1%B0?node-id=2481-5032&t=iBmMUsWcc8APvLs8-1" target = "_blank">
         리뷰 더 보러가기
       </Button>
     </ReviewContainer>

@@ -102,11 +102,11 @@ const Footer = () => {
       <FooterContents>
         <FooterTextWrapper>
           <FooterTabWrapper>
-            <FooterTab href="https://www.naver.com/" target="_blank">
+            <FooterTab onClick={() => window.alert("준비중입니다.")}>
               개인정보처리방침
             </FooterTab>
             <FooterTab>| </FooterTab>
-            <FooterTab href="https://www.naver.com/" target="_blank">
+            <FooterTab onClick={() => window.alert("준비중입니다.")}>
               서비스 이용약관
             </FooterTab>
           </FooterTabWrapper>

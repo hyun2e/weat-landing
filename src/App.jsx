@@ -30,7 +30,7 @@ const slides = [
     content2: "맞춤형 건강식당 서비스",
     button: {
       type: "hero-btn1",
-      href: "https://www.naver.com",
+      href: "https://www.figma.com/proto/NrEuIFexqypyInjjmqg408/3%EC%A1%B0?node-id=2481-5032&t=iBmMUsWcc8APvLs8-1",
     },
   },
   {
@@ -43,6 +43,7 @@ const slides = [
     content2: "건강식의 세계를 보여드릴게요 ",
     button: {
       type: "hero-btn2",
+      href: "https://www.figma.com/proto/NrEuIFexqypyInjjmqg408/3%EC%A1%B0?node-id=2481-5032&t=iBmMUsWcc8APvLs8-1",
     },
   },
   {
@@ -64,6 +65,7 @@ const slides = [
     content2: "귀여운 캐릭터 지금 만나러 가보실까요? ",
     button: {
       type: "hero-btn3",
+      href: "https://www.figma.com/proto/NrEuIFexqypyInjjmqg408/3%EC%A1%B0?node-id=2481-5032&t=iBmMUsWcc8APvLs8-1",
     },
   },
   {

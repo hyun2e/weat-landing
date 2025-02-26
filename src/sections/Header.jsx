@@ -142,7 +142,7 @@ const Header = () => {
           챌린지
         </HeaderLink>
         <PrototypeLink
-          href="https://www.figma.com/proto/NrEuIFexqypyInjjmqg408/3%EC%A1%B0?node-id=2481-5032&t=asqaWnRNx7bM1S7C-1"
+          href="https://www.figma.com/proto/NrEuIFexqypyInjjmqg408/3%EC%A1%B0?node-id=2481-5032&t=iBmMUsWcc8APvLs8-1"
           target="_blank"
         >
           체험하기
@@ -155,7 +155,7 @@ const Header = () => {
         <a onClick={() => scrollToSection("info")}>위잇트 소개</a>
         <a onClick={() => scrollToSection("community")}>커뮤니티</a>
         <a onClick={() => scrollToSection("challenge")}>챌린지</a>
-        <a href="https://www.figma.com/proto/NrEuIFexqypyInjjmqg408/3%EC%A1%B0?node-id=2481-5032&t=asqaWnRNx7bM1S7C-1">
+        <a href="https://www.figma.com/proto/NrEuIFexqypyInjjmqg408/3%EC%A1%B0?node-id=2481-5032&t=iBmMUsWcc8APvLs8-1">
           체험하기
         </a>
       </MobileMenu>
